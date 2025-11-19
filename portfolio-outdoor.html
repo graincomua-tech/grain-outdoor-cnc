@@ -2,145 +2,44 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфоліо — Зовнішня реклама | GRAIN</title>
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Анімації -->
+  <title>Портфоліо зовнішньої реклами | GRAIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:#f3f4f6;}
+    a { text-decoration:none; color:inherit; }
+    .container { max-width:1120px; margin:0 auto; padding:0 16px; }
+    header { background:#ffffff; border-bottom:1px solid #e5e7eb; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:12px 0;}
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin:24px 0;}
+    .card { background:#ffffff; border-radius:14px; padding:12px; border:1px solid #e5e7eb; font-size:14px;}
+    img { width:100%; border-radius:10px; display:block; margin-bottom:8px; object-fit:cover; }
+    h1 { font-size:24px; margin:20px 0 8px; }
+    p { font-size:14px; color:#6b7280; }
   </style>
 </head>
-
-<body class="bg-[#F8F8F8] text-[#042030]">
-
-<!-- ================= HEADER ================= -->
-<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center gap-4">
-    <a href="/" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
-
-    <nav class="hidden md:flex gap-8 text-lg font-medium">
-      <a href="/index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-      <a href="/index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
-      <a href="/about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-      <a href="/contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-    </nav>
-
-    <a href="https://t.me/+380962443724"
-       target="_blank"
-       rel="noopener"
-       class="hidden md:block px-5 py-2 bg-[#00659A] text-white rounded-lg shadow hover:opacity-90 transition">
-      Замовити Дзвінок
-    </a>
+<body>
+<header>
+  <div class="container nav">
+    <a href="index.html">← На головну</a>
+    <strong>Портфоліо зовнішньої реклами</strong>
   </div>
 </header>
 
+<main class="container">
+  <h1>Портфоліо зовнішньої реклами</h1>
+  <p>Вивіски, обʼємні літери, контражур, лайтбокси, фасадні конструкції.</p>
 
+  <div class="grid">
+    <!-- Картка роботи №1 -->
+    <article class="card">
+      <!-- <img src="images/sign-1.jpg" alt="Назва роботи" /> -->
+      <strong>Обʼємні контражурні літери</strong>
+      <p>Акрил + композит, LED-модулі, індивідуальний колір фасаду.</p>
+    </article>
 
-<!-- ================= TITLE ================= -->
-<section class="pt-32 pb-10 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-up">Наші роботи — зовнішня реклама</h1>
-    <p class="text-lg max-w-3xl fade-up">
-      Виготовляємо вивіски, лайтбокси, об’ємні літери, неонові рішення, акриллайти та інші елементи зовнішньої реклами. 
-      Показуємо реальні роботи, виконані для бізнесів Львова та України.
-    </p>
+    <!-- Додавай нові картки за цим шаблоном -->
   </div>
-</section>
-
-
-
-<!-- ================= FILTERS ================= -->
-<section class="pb-8 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-wrap gap-3">
-
-      <button class="px-4 py-2 bg-[#042030] text-white rounded-lg filter-btn" data-filter="all">Усі роботи</button>
-      <button class="px-4 py-2 bg-gray-200 rounded-lg filter-btn" data-filter="composite">Композитні вивіски</button>
-      <button class="px-4 py-2 bg-gray-200 rounded-lg filter-btn" data-filter="lightbox">Лайтбокси</button>
-      <button class="px-4 py-2 bg-gray-200 rounded-lg filter-btn" data-filter="neon">Неонові вивіски</button>
-      <button class="px-4 py-2 bg-gray-200 rounded-lg filter-btn" data-filter="acryllight">Акриллайт</button>
-      <button class="px-4 py-2 bg-gray-200 rounded-lg filter-btn" data-filter="letters">Об’ємні літери</button>
-      <button class="px-4 py-2 bg-gray-200 rounded-lg filter-btn" data-filter="side-signs">Торцеві вивіски</button>
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ================= GALLERY ================= -->
-<section class="pb-20 px-6">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8" id="gallery">
-
-    <!-- Приклади робіт -->
-    <div class="gallery-item composite fade-up">
-      <img src="/img/outdoor/composite1.jpg" class="rounded-lg shadow-lg w-full h-64 object-cover" alt="Вивіска з композиту">
-    </div>
-
-    <div class="gallery-item lightbox fade-up">
-      <img src="/img/outdoor/lightbox1.jpg" class="rounded-lg shadow-lg w-full h-64 object-cover" alt="Лайтбокс">
-    </div>
-
-    <div class="gallery-item neon fade-up">
-      <img src="/img/outdoor/neon1.jpg" class="rounded-lg shadow-lg w-full h-64 object-cover" alt="Неонова вивіска">
-    </div>
-
-    <div class="gallery-item letters fade-up">
-      <img src="/img/outdoor/letters1.jpg" class="rounded-lg shadow-lg w-full h-64 object-cover" alt="Об’ємні літери">
-    </div>
-
-    <div class="gallery-item side-signs fade-up">
-      <img src="/img/outdoor/side1.jpg" class="rounded-lg shadow-lg w-full h-64 object-cover" alt="Торцева вивіска">
-    </div>
-
-    <div class="gallery-item cryllight fade-up">
-      <img src="/img/outdoor/acryllight1.jpg" class="rounded-lg shadow-lg w-full h-64 object-cover" alt="Акриллайт">
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- ================= SIMPLE FILTER SCRIPT ================= -->
-<script>
-  const buttons = document.querySelectorAll('.filter-btn');
-  const items = document.querySelectorAll('.gallery-item');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
-
-      // Активна кнопка
-      buttons.forEach(b => b.classList.remove('bg-[#042030]', 'text-white'));
-      btn.classList.add('bg-[#042030]', 'text-white');
-
-      // Фільтрація елементів
-      items.forEach(item => {
-        if (filter === 'all' || item.classList.contains(filter)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
-
-
-
+</main>
 </body>
 </html>
+
