@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфоліо — Фрезерна порізка | GRAIN</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-[#F8F8F8] text-[#042030]">
+
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center gap-4">
+    <a href="/" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
+
+    <nav class="hidden md:flex gap-8 text-lg font-medium">
+      <a href="/index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="/index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+      <a href="/portfolio-outdoor.html" class="text-[#E7972E] font-semibold">Портфоліо</a>
+      <a href="/about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+      <a href="/contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+    </nav>
+
+    <a href="https://t.me/+380962443724"
+       target="_blank"
+       rel="noopener"
+       class="hidden md:block px-6 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+      Замовити дзвінок
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-28 pb-10 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-sm uppercase tracking-[0.2em] text-gray-500 mb-2 fade-up">
+      Портфоліо
+    </p>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-up">
+      Наші роботи — фрезерна порізка
+    </h1>
+    <p class="text-lg max-w-3xl mb-6 fade-up">
+      Приклади деталей і виробів, виконаних на ЧПУ-фрезері: акрил, композит, фанера,
+      текстоліт, полікарбонат, технічні деталі та 3D-елементи.
+    </p>
+
+    <div class="flex flex-wrap gap-3 mb-4 fade-up">
+      <a href="/portfolio-outdoor.html"
+         class="px-4 py-2 rounded-lg border border-[#042030]/40 text-[#042030] hover:bg-[#042030] hover:text-white transition">
+        Зовнішня реклама
+      </a>
+      <a href="/portfolio-cnc.html"
+         class="px-4 py-2 rounded-lg bg-[#042030] text-white font-semibold">
+        Фрезерна порізка
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ФІЛЬТРИ -->
+<section class="pb-6 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-wrap gap-3">
+      <button data-filter="all"
+              class="filter-btn px-4 py-2 rounded-full bg-[#042030] text-white text-sm font-medium">
+        Усі роботи
+      </button>
+      <button data-filter="acrylic"
+              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
+        Акрил / пластик
+      </button>
+      <button data-filter="composite"
+              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
+        Композит
+      </button>
+      <button data-filter="plywood"
+              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
+        Фанера / МДФ
+      </button>
+      <button data-filter="textolite"
+              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
+        Текстоліт
+      </button>
+      <button data-filter="other"
+              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
+        Інші деталі
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+<section class="pb-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <div class="gallery-item acrylic fade-up">
+      <img src="/img/cnc/acrylic-1.jpg"
+           alt="Фрезерована деталь з акрилу"
+           class="w-full h-64 object-cover rounded-2xl shadow" />
+    </div>
+
+    <div class="gallery-item composite fade-up">
+      <img src="/img/cnc/composite-1.jpg"
+           alt="Композитна панель після фрезерування"
+           class="w-full h-64 object-cover rounded-2xl shadow" />
+    </div>
+
+    <div class="gallery-item plywood fade-up">
+      <img src="/img/cnc/plywood-1.jpg"
+           alt="Фрезерування фанери"
+           class="w-full h-64 object-cover rounded-2xl shadow" />
+    </div>
+
+    <div class="gallery-item textolite fade-up">
+      <img src="/img/cnc/textolite-1.jpg"
+           alt="Деталі з текстоліту"
+           class="w-full h-64 object-cover rounded-2xl shadow" />
+    </div>
+
+    <div class="gallery-item other fade-up">
+      <img src="/img/cnc/other-1.jpg"
+           alt="Технічні деталі"
+           class="w-full h-64 object-cover rounded-2xl shadow" />
+    </div>
+
+    <div class="gallery-item other fade-up">
+      <img src="/img/cnc/other-2.jpg"
+           alt="3D-елементи"
+           class="w-full h-64 object-cover rounded-2xl shadow" />
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const buttons2 = document.querySelectorAll('.filter-btn');
+  const items2 = document.querySelectorAll('.gallery-item');
+
+  buttons2.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      buttons2.forEach(b => {
+        b.classList.remove('bg-[#042030]', 'text-white');
+        if (!b.classList.contains('bg-gray-200')) {
+          b.classList.add('bg-gray-200');
+        }
+      });
+
+      btn.classList.remove('bg-gray-200');
+      btn.classList.add('bg-[#042030]', 'text-white');
+
+      items2.forEach(item => {
+        if (filter === 'all' || item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
+  <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
+</footer>
+
+</body>
+</html>
