@@ -56,44 +56,50 @@
     <!-- Перемикач між двома портфоліо -->
     <div class="flex flex-wrap gap-3 mb-10">
       <a href="portfolio-outdoor.html"
-   class="inline-flex items-center justify-center px-5 py-3 rounded-xl 
-          bg-[#E7972E] text-white font-semibold hover:bg-[#d88921] transition">
-  Переглянути роботи з зовнішньої реклами
-</a>
+         class="px-4 py-2 rounded-lg bg-[#042030] text-white font-semibold">
+        Зовнішня реклама
+      </a>
       <a href="portfolio-cnc.html"
-         class="px-5 py-2 rounded-full border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-white">
+         class="px-4 py-2 rounded-lg border border-[#042030]/40 text-[#042030] hover:bg-[#042030] hover:text-white transition">
         Фрезерна порізка
       </a>
     </div>
 
     <!-- Фільтри -->
     <div class="flex flex-wrap gap-3 mb-8">
-      <button class="px-4 py-2 rounded-full bg-[#042030] text-white text-sm font-semibold">
+      <button class="filter-btn px-4 py-2 rounded-full bg-[#042030] text-white text-sm font-semibold"
+              data-filter="all">
         Усі роботи
       </button>
-      <button class="px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200">
+      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
+              data-filter="composite">
         Вивіски з композиту
       </button>
-      <button class="px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200">
+      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
+              data-filter="letters">
         Обʼємні літери / контражур
       </button>
-      <button class="px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200">
+      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
+              data-filter="neon">
         Неон / LED-неон
       </button>
-      <button class="px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200">
+      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
+              data-filter="lightbox">
         Лайтбокси / торцеві
       </button>
-      <button class="px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200">
+      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
+              data-filter="other">
         Інші рішення
       </button>
     </div>
 
-    <!-- Сітка робіт (підставиш свої фото) -->
+    <!-- Сітка робіт -->
     <div class="grid md:grid-cols-3 gap-6">
 
-      <!-- Картка 1 -->
-      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-        <!-- <img src="images/outdoor-sign-1.jpg" alt="Фасадна вивіска з композиту та акрилу"
+      <!-- Картка 1: композит -->
+      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
+               data-category="composite">
+        <!-- <img src="img/outdoor/outdoor-sign-1.jpg" alt="Фасадна вивіска з композиту та акрилу"
              class="w-full h-56 object-cover" /> -->
         <div class="p-5 flex-1 flex flex-col">
           <h3 class="font-semibold text-lg mb-2">Фасадна вивіска з композиту та акрилу</h3>
@@ -106,9 +112,10 @@
         </div>
       </article>
 
-      <!-- Картка 2 -->
-      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-        <!-- <img src="images/outdoor-sign-2.jpg" alt="Контражурні обʼємні літери"
+      <!-- Картка 2: обʼємні літери -->
+      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
+               data-category="letters">
+        <!-- <img src="img/outdoor/outdoor-sign-2.jpg" alt="Контражурні обʼємні літери"
              class="w-full h-56 object-cover" /> -->
         <div class="p-5 flex-1 flex flex-col">
           <h3 class="font-semibold text-lg mb-2">Контражурні обʼємні літери</h3>
@@ -121,9 +128,10 @@
         </div>
       </article>
 
-      <!-- Картка 3 -->
-      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-        <!-- <img src="images/outdoor-sign-3.jpg" alt="Неонова вивіска в інтерʼєрі"
+      <!-- Картка 3: неон -->
+      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
+               data-category="neon">
+        <!-- <img src="img/outdoor/outdoor-sign-3.jpg" alt="Неонова вивіска в інтерʼєрі"
              class="w-full h-56 object-cover" /> -->
         <div class="p-5 flex-1 flex flex-col">
           <h3 class="font-semibold text-lg mb-2">Неонова вивіска в інтерʼєрі</h3>
@@ -136,9 +144,10 @@
         </div>
       </article>
 
-      <!-- Картка 4 -->
-      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-        <!-- <img src="images/outdoor-sign-4.jpg" alt="Торцева двостороння вивіска"
+      <!-- Картка 4: лайтбокс / торцева -->
+      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
+               data-category="lightbox">
+        <!-- <img src="img/outdoor/outdoor-sign-4.jpg" alt="Торцева двостороння вивіска"
              class="w-full h-56 object-cover" /> -->
         <div class="p-5 flex-1 flex flex-col">
           <h3 class="font-semibold text-lg mb-2">Торцева двостороння вивіска</h3>
@@ -151,9 +160,10 @@
         </div>
       </article>
 
-      <!-- Картка 5 -->
-      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-        <!-- <img src="images/outdoor-sign-5.jpg" alt="Лайтбокс над входом"
+      <!-- Картка 5: лайтбокс -->
+      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
+               data-category="lightbox">
+        <!-- <img src="img/outdoor/outdoor-sign-5.jpg" alt="Лайтбокс над входом"
              class="w-full h-56 object-cover" /> -->
         <div class="p-5 flex-1 flex flex-col">
           <h3 class="font-semibold text-lg mb-2">Лайтбокс над входом</h3>
@@ -166,9 +176,10 @@
         </div>
       </article>
 
-      <!-- Картка 6 -->
-      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-        <!-- <img src="images/outdoor-sign-6.jpg" alt="Комплексне брендування фасаду"
+      <!-- Картка 6: інші рішення -->
+      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
+               data-category="other">
+        <!-- <img src="img/outdoor/outdoor-sign-6.jpg" alt="Комплексне брендування фасаду"
              class="w-full h-56 object-cover" /> -->
         <div class="p-5 flex-1 flex flex-col">
           <h3 class="font-semibold text-lg mb-2">Комплексне брендування фасаду</h3>
@@ -188,6 +199,36 @@
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.gallery-item');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      // стилі кнопок
+      btns.forEach(b => {
+        b.classList.remove('bg-[#042030]', 'text-white');
+        b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+      });
+
+      btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+      btn.classList.add('bg-[#042030]', 'text-white');
+
+      // фільтрація карток
+      cards.forEach(card => {
+        const category = card.dataset.category;
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
