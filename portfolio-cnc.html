@@ -21,29 +21,24 @@
 </head>
 <body class="bg-[#F8F8F8] text-[#042030]">
 
+<!-- ================= HEADER ================= -->
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center gap-4">
-    <a href="/" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
+    <!-- логотип веде на головну -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
 
-   <nav class="hidden md:flex gap-8 text-lg font-medium">
-  <!-- секції на головній -->
-  <a href="#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-  <a href="#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+    <nav class="hidden md:flex gap-8 text-lg font-medium">
+      <!-- посилання на блоки головної сторінки -->
+      <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
 
-  <!-- сторінки портфоліо -->
-  <a href="portfolio-outdoor.html" class="hover:text-[#E7972E] transition">
-    Портфоліо реклами
-  </a>
-  <a href="portfolio-cnc.html"
-   class="inline-flex items-center justify-center px-5 py-3 rounded-xl 
-          bg-[#E7972E] text-white font-semibold hover:bg-[#d88921] transition">
-  Переглянути роботи з фрезерної порізки
-</a>
+      <!-- одна кнопка портфоліо -->
+      <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
 
-  <!-- інші сторінки -->
-  <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-  <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-</nav>
+      <!-- інші сторінки -->
+      <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+      <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+    </nav>
 
     <a href="https://t.me/+380962443724"
        target="_blank"
@@ -54,7 +49,7 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="pt-28 pb-10 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
     <p class="text-sm uppercase tracking-[0.2em] text-gray-500 mb-2 fade-up">
@@ -68,12 +63,13 @@
       текстоліт, полікарбонат, технічні деталі та 3D-елементи.
     </p>
 
+    <!-- перемикач між двома портфоліо -->
     <div class="flex flex-wrap gap-3 mb-4 fade-up">
-      <a href="/portfolio-outdoor.html"
+      <a href="portfolio-outdoor.html"
          class="px-4 py-2 rounded-lg border border-[#042030]/40 text-[#042030] hover:bg-[#042030] hover:text-white transition">
         Зовнішня реклама
       </a>
-      <a href="/portfolio-cnc.html"
+      <a href="portfolio-cnc.html"
          class="px-4 py-2 rounded-lg bg-[#042030] text-white font-semibold">
         Фрезерна порізка
       </a>
@@ -81,7 +77,7 @@
   </div>
 </section>
 
-<!-- ФІЛЬТРИ -->
+<!-- ================= ФІЛЬТРИ ================= -->
 <section class="pb-6 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-wrap gap-3">
@@ -113,42 +109,42 @@
   </div>
 </section>
 
-<!-- ГАЛЕРЕЯ -->
+<!-- ================= ГАЛЕРЕЯ ================= -->
 <section class="pb-20 px-6 bg-white">
   <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
     <div class="gallery-item acrylic fade-up">
-      <img src="/img/cnc/acrylic-1.jpg"
+      <img src="img/cnc/acrylic-1.jpg"
            alt="Фрезерована деталь з акрилу"
            class="w-full h-64 object-cover rounded-2xl shadow" />
     </div>
 
     <div class="gallery-item composite fade-up">
-      <img src="/img/cnc/composite-1.jpg"
+      <img src="img/cnc/composite-1.jpg"
            alt="Композитна панель після фрезерування"
            class="w-full h-64 object-cover rounded-2xl shadow" />
     </div>
 
     <div class="gallery-item plywood fade-up">
-      <img src="/img/cnc/plywood-1.jpg"
+      <img src="img/cnc/plywood-1.jpg"
            alt="Фрезерування фанери"
            class="w-full h-64 object-cover rounded-2xl shadow" />
     </div>
 
     <div class="gallery-item textolite fade-up">
-      <img src="/img/cnc/textolite-1.jpg"
+      <img src="img/cnc/textolite-1.jpg"
            alt="Деталі з текстоліту"
            class="w-full h-64 object-cover rounded-2xl shadow" />
     </div>
 
     <div class="gallery-item other fade-up">
-      <img src="/img/cnc/other-1.jpg"
+      <img src="img/cnc/other-1.jpg"
            alt="Технічні деталі"
            class="w-full h-64 object-cover rounded-2xl shadow" />
     </div>
 
     <div class="gallery-item other fade-up">
-      <img src="/img/cnc/other-2.jpg"
+      <img src="img/cnc/other-2.jpg"
            alt="3D-елементи"
            class="w-full h-64 object-cover rounded-2xl shadow" />
     </div>
@@ -164,16 +160,16 @@
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
 
+      // стилі кнопок
       buttons2.forEach(b => {
         b.classList.remove('bg-[#042030]', 'text-white');
-        if (!b.classList.contains('bg-gray-200')) {
-          b.classList.add('bg-gray-200');
-        }
+        b.classList.add('bg-gray-200');
       });
 
       btn.classList.remove('bg-gray-200');
       btn.classList.add('bg-[#042030]', 'text-white');
 
+      // фільтрація карток
       items2.forEach(item => {
         if (filter === 'all' || item.classList.contains(filter)) {
           item.style.display = 'block';
