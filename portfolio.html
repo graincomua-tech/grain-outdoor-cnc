@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфоліо | GRAIN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-[#F8F8F8] text-[#042030]">
+
+<!-- HEADER такий самий стиль, як на головній -->
+<header class="w-full bg-white shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center gap-4">
+    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
+    <nav class="hidden md:flex gap-8 text-lg font-medium">
+      <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+      <a href="portfolio.html" class="text-[#E7972E] font-semibold">Портфоліо</a>
+      <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+      <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+    </nav>
+    <a href="https://t.me/+380962443724"
+       target="_blank"
+       rel="noopener"
+       class="hidden md:block px-6 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+      Замовити дзвінок
+    </a>
+  </div>
+</header>
+
+<main class="pt-16 pb-20 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <p class="uppercase tracking-[0.2em] text-xs text-gray-500 mb-4">Портфоліо</p>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Наші роботи
+    </h1>
+    <p class="text-lg text-gray-700 mb-10 max-w-2xl">
+      Перегляньте приклади виготовлених вивісок, обʼємних літер та деталей,
+      виконаних на ЧПУ-фрезері. Портфоліо поділено на два напрямки: зовнішня реклама та фрезерна порізка.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Картка: зовнішня реклама -->
+      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 p-8 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold mb-3">Портфоліо зовнішньої реклами</h2>
+          <p class="text-gray-700 mb-4">
+            Вивіски, обʼємні літери, контражур, неонові рішення, лайтбокси та фасадні конструкції.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-1 mb-6 list-disc list-inside">
+            <li>Фасадні вивіски з композиту та акрилу</li>
+            <li>Неонові та контражурні літери</li>
+            <li>Лайтбокси та торцеві вивіски</li>
+          </ul>
+        </div>
+        <a href="portfolio-outdoor.html"
+           class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#042030] text-white font-semibold hover:opacity-90 transition">
+          Переглянути роботи з зовнішньої реклами
+        </a>
+      </article>
+
+      <!-- Картка: фрезерна порізка -->
+      <article class="bg-white rounded-3xl shadow-sm border border-gray-200 p-8 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold mb-3">Портфоліо фрезерної порізки</h2>
+          <p class="text-gray-700 mb-4">
+            Деталі з акрилу, композиту, фанери, текстоліту, технічні та 3D-елементи, надмогильні покриття.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-1 mb-6 list-disc list-inside">
+            <li>Розкрій листових матеріалів</li>
+            <li>Фаски, пази, обробка торців</li>
+            <li>3D-елементи та прототипи</li>
+          </ul>
+        </div>
+        <a href="portfolio-cnc.html"
+           class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#E7972E] text-white font-semibold hover:bg-[#d88921] transition">
+          Переглянути роботи з фрезерної порізки
+        </a>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
+  <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
+</footer>
+
+</body>
+</html>
