@@ -28,40 +28,48 @@
 <body class="bg-[#F8F8F8] text-[#042030]">
 
 <!-- ================= HEADER ================= -->
-<header class="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur-md shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center">
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-4">
 
-    <!-- ЛОГО -->
-    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] mr-10">
+    <!-- Лого -->
+    <a href="index.html"
+       class="text-xl font-bold tracking-wide text-[#042030] mr-4">
       GRAIN
     </a>
 
-    <!-- МЕНЮ -->
-    <nav class="hidden md:flex flex-1 justify-center gap-10 text-lg font-medium">
-      <a href="#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-      <a href="#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
-      <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
-      <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-      <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+    <!-- Меню по центру -->
+    <nav class="hidden md:flex flex-1 justify-center gap-6 text-base font-medium">
+      <a href="#outdoor" class="hover:text-[#E7972E] transition">
+        Зовнішня реклама
+      </a>
+      <a href="#cnc" class="hover:text-[#E7972E] transition">
+        Фрезерна порізка
+      </a>
+      <a href="portfolio.html" class="hover:text-[#E7972E] transition">
+        Портфоліо
+      </a>
+      <a href="about.html" class="hover:text-[#E7972E] transition">
+        Про нас
+      </a>
+      <a href="contacts.html" class="hover:text-[#E7972E] transition">
+        Контакти
+      </a>
     </nav>
 
-    <!-- ТЕЛЕФОН + КНОПКА -->
-    <div class="hidden md:flex items-center gap-6 ml-10">
-
-      <!-- Телефон -->
+    <!-- Правий блок: телефон + кнопка -->
+    <div class="hidden md:flex items-center gap-4 flex-shrink-0">
       <a href="tel:+380962443724"
-         class="flex items-center gap-2 text-lg font-semibold text-[#042030] hover:text-[#E7972E] transition">
-        <span class="text-xl leading-none">📞</span>
+         class="flex items-center gap-2 text-sm font-semibold text-[#042030] hover:text-[#E7972E] transition">
+        <span>📞</span>
         <span>+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</span>
       </a>
 
-      <!-- Кнопка -->
       <a href="https://t.me/+380962443724"
          target="_blank"
-         class="px-6 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+         rel="noopener"
+         class="px-5 py-2 rounded-lg bg-[#042030] text-white text-sm font-semibold hover:opacity-80 transition">
         Замовити дзвінок
       </a>
-
     </div>
 
   </div>
