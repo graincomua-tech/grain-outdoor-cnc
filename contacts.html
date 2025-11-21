@@ -6,17 +6,17 @@
   <title>Контакти — Grain</title>
   <meta name="description" content="Зв’яжіться з Grain: замовлення фрезерної порізки, зовнішньої реклами, прорахунок проєктів та консультації. Львів, Україна.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/main.js" defer></script>
 </head>
 
 <body class="bg-white text-[#042030]">
 
+<!-- ================= HEADER ================= -->
 <header class="w-full bg-white shadow-sm">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
 
-    <!-- ЛІВА ЧАСТИНА: ЛОГО + МЕНЮ -->
+    <!-- ЛІВА ЧАСТИНА -->
     <div class="flex items-center gap-10">
+
       <!-- Лого -->
       <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
         GRAIN
@@ -32,16 +32,19 @@
       </nav>
     </div>
 
-    <!-- ПРАВА ЧАСТИНА: ТЕЛЕФОН + КНОПКА -->
+    <!-- ПРАВА ЧАСТИНА -->
     <div class="hidden md:flex items-center gap-6">
+
+      <!-- Телефон -->
       <a href="tel:+380962443724"
-         class="text-base font-semibold text-[#042030] hover:text-[#E7972E] transition">
+         class="flex items-center gap-2 text-base font-semibold text-[#042030] hover:text-[#E7972E] transition">
+        <span class="text-xl">📞</span>
         +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
       </a>
 
+      <!-- Кнопка -->
       <a href="https://t.me/+380962443724"
          target="_blank"
-         rel="noopener"
          class="px-6 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
         Замовити дзвінок
       </a>
@@ -50,48 +53,61 @@
   </div>
 </header>
 
+
+<!-- ================= CONTENT ================= -->
 <section class="pt-32 pb-20 px-6">
   <div class="max-w-4xl mx-auto">
+    
     <h1 class="text-4xl font-bold mb-6">Контакти</h1>
 
-    <p class="text-lg mb-4">Залиште заявку або зателефонуйте — і ми допоможемо з вашим проєктом.</p>
-    <div class="mt-6 mb-10 flex flex-col md:flex-row items-center gap-4">
-      <div class="text-lg text-center md:text-left">
-        <div class="flex items-center justify-center md:justify-start gap-2">
+    <p class="text-lg mb-6">Залиште заявку або зателефонуйте — і ми допоможемо з вашим проєктом.</p>
+
+    <div class="mt-6 mb-10 flex flex-col md:flex-row items-center md:items-start gap-4">
+
+      <!-- Телефон + Email -->
+      <div class="text-lg">
+        <div class="flex items-center gap-2 mb-2">
           <span>📞</span>
-          <a href="tel:+380962443724" class="hover:text-[#E7972E]">
+          <a href="tel:+380962443724" class="hover:text-[#E7972E] transition">
             +38 096 244 37 24
           </a>
         </div>
-        <div class="flex items-center justify-center md:justify-start gap-2 mt-2">
-  <span>✉️</span>
-  <a href="mailto:info@grain.lviv.ua" class="hover:text-[#E7972E]">
-    info@grain.lviv.ua
-  </a>
-</div>
 
+        <div class="flex items-center gap-2">
+          <span>✉️</span>
+          <a href="mailto:info@grain.lviv.ua" class="hover:text-[#E7972E] transition">
+            info@grain.lviv.ua
+          </a>
+        </div>
       </div>
 
-      <a href="https://t.me/+380962443724"
-         target="_blank"
-         rel="noopener"
-         class="px-8 py-3 bg-[#00659A] text-white rounded-lg text-lg font-semibold hover:opacity-90 transition">
-        Замовити Дзвінок
-      </a>
     </div>
 
+
+    <!-- Дві колонки -->
     <div class="grid md:grid-cols-2 gap-10 mt-10">
+
+      <!-- Ліва колонка -->
       <div>
         <h3 class="text-2xl font-bold mb-2">Телефон</h3>
-        <p class="text-lg mb-6"><a href="tel:+380000000000" class="text-[#042030] hover:text-[#E7972E]">+38 (000) 000-00-00</a></p>
+        <p class="text-lg mb-6">
+          <a href="tel:+380962443724" class="hover:text-[#E7972E] transition">
+            +38 096 244 37 24
+          </a>
+        </p>
 
         <h3 class="text-2xl font-bold mb-2">Email</h3>
-        <p class="text-lg mb-6"><a href="mailto:info@grain.lviv.ua" class="text-[#042030] hover:text-[#E7972E]">info@grain.lviv.ua</a></p>
+        <p class="text-lg mb-6">
+          <a href="mailto:info@grain.lviv.ua" class="hover:text-[#E7972E] transition">
+            info@grain.lviv.ua
+          </a>
+        </p>
 
         <h3 class="text-2xl font-bold mb-2">Адреса</h3>
         <p class="text-lg">м. Львів</p>
       </div>
 
+      <!-- Права колонка -->
       <div>
         <h3 class="text-2xl font-bold mb-4">Форма заявки</h3>
 
@@ -99,15 +115,20 @@
           <input type="text" placeholder="Ваше ім’я" class="border p-3 rounded-lg text-black">
           <input type="tel" placeholder="Телефон" class="border p-3 rounded-lg text-black">
           <textarea placeholder="Ваше питання або проєкт" class="border p-3 rounded-lg h-32 text-black"></textarea>
+
           <button class="px-10 py-3 bg-[#042030] text-white rounded-lg text-lg font-semibold hover:bg-black transition">
             Надіслати
           </button>
         </form>
       </div>
+
     </div>
+
   </div>
 </section>
 
+
+<!-- ================= FOOTER ================= -->
 <footer class="py-10 bg-[#042030] text-white">
   <div class="max-w-6xl mx-auto px-6 text-center">
     © Grain, Львів — Зовнішня реклама та фрезерна порізка.
