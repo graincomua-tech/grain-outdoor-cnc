@@ -26,27 +26,25 @@
       }
     }
 
-    /* Щоб при переході по якорях контент не ховався під фіксованим header */
+    /* Щоб контент по якорях не ховався під фіксованим header */
     section[id] {
       scroll-margin-top: 96px;
     }
 
-    /* На всяк випадок прибираємо можливу іконку телефону перед номером у шапці,
-       якщо її додає якийсь зовнішній CSS */
+    /* На випадок, якщо десь підтягується іконка для tel-посилань */
     header a[href^="tel"]::before {
       content: none !important;
       display: none !important;
     }
   </style>
 </head>
-
 <body class="bg-[#F8F8F8] text-[#042030]">
 
 <!-- ================= HEADER ================= -->
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
 
-    <!-- ЛІВА ЧАСТИНА: логотип + меню -->
+    <!-- ЛІВА ЧАСТИНА: ЛОГО + МЕНЮ -->
     <div class="flex items-center gap-10">
       <!-- Лого -->
       <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
@@ -55,25 +53,15 @@
 
       <!-- Меню -->
       <nav class="hidden md:flex items-center gap-8 text-lg font-medium">
-        <a href="#outdoor" class="hover:text-[#E7972E] transition">
-          Зовнішня реклама
-        </a>
-        <a href="#cnc" class="hover:text-[#E7972E] transition">
-          Фрезерна порізка
-        </a>
-        <a href="portfolio.html" class="hover:text-[#E7972E] transition">
-          Портфоліо
-        </a>
-        <a href="about.html" class="hover:text-[#E7972E] transition">
-          Про нас
-        </a>
-        <a href="contacts.html" class="hover:text-[#E7972E] transition">
-          Контакти
-        </a>
+        <a href="#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+        <a href="#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+        <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
+        <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+        <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
       </nav>
     </div>
 
-    <!-- ПРАВА ЧАСТИНА: телефон + кнопка -->
+    <!-- ПРАВА ЧАСТИНА: ТЕЛЕФОН + КНОПКА -->
     <div class="hidden md:flex items-center gap-6">
       <a href="tel:+380962443724"
          class="text-base font-semibold text-[#042030] hover:text-[#E7972E] transition">
@@ -133,9 +121,7 @@
 <!-- ================= ЗОВНІШНЯ РЕКЛАМА ================= -->
 <section id="outdoor" class="py-20 bg-[#042030] text-white">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl md:text-5xl font-bold mb-8 fade-up">
-      Зовнішня реклама
-    </h2>
+    <h2 class="text-4xl md:text-5xl font-bold mb-8 fade-up">Зовнішня реклама</h2>
     <p class="text-lg max-w-3xl mb-10 fade-up">
       Виготовляємо вивіски, лайтбокси, неонові рішення, акриллайти, окремі літери та торцеві вивіски.
       Допомагаємо підібрати найкращий варіант під бюджет, фасад і завдання бізнесу.
@@ -145,9 +131,7 @@
 
       <!-- 1. Вивіски з композиту -->
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
-        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">
-          Вивіски з композиту
-        </h3>
+        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Вивіски з композиту</h3>
         <p class="text-lg text-white/80">
           Стабільні та довговічні фасадні рішення з підсвіткою або без.
         </p>
@@ -155,9 +139,7 @@
 
       <!-- 2. Лайтбокси, акриллайти -->
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
-        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">
-          Лайтбокси, акриллайти
-        </h3>
+        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Лайтбокси, акриллайти</h3>
         <p class="text-lg text-white/80">
           Світлові короби, slim-лайтбокси та акрилові панелі з рівномірним світлом.
         </p>
@@ -165,9 +147,7 @@
 
       <!-- 3. Неонова вивіска -->
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
-        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">
-          Неонова вивіска
-        </h3>
+        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Неонова вивіска</h3>
         <p class="text-lg text-white/80">
           Неонові вивіски, контражурний неон, інтер’єрні неонові написи та декоративні елементи.
         </p>
@@ -175,9 +155,7 @@
 
       <!-- 4. Окремі літери -->
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
-        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">
-          Окремі літери
-        </h3>
+        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Окремі літери</h3>
         <p class="text-lg text-white/80">
           Фасадні та інтер’єрні об’ємні літери, логотипи та 3D-елементи бренду.
         </p>
@@ -185,9 +163,7 @@
 
       <!-- 5. Торцеві вивіски -->
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
-        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">
-          Торцеві вивіски
-        </h3>
+        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Торцеві вивіски</h3>
         <p class="text-lg text-white/80">
           Вивіски, розташовані перпендикулярно до фасаду, добре помітні з тротуару та дороги.
         </p>
@@ -195,9 +171,7 @@
 
       <!-- 6. Інші рішення -->
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
-        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">
-          Інші рішення
-        </h3>
+        <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Інші рішення</h3>
         <p class="text-lg text-white/80">
           Таблички, навігація, інформаційні стенди, вхідні групи та інші елементи зовнішньої реклами.
         </p>
@@ -212,9 +186,7 @@
 <section id="cnc" class="py-20 bg-white">
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
     <div>
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 fade-up">
-        Фрезерна порізка на ЧПУ
-      </h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 fade-up">Фрезерна порізка на ЧПУ</h2>
       <p class="text-lg mb-4 fade-up">
         Виконуємо фрезерну порізку пластику, композиту, акрилу, фанери, текстоліту, полікарбонату та інших матеріалів.
         Працюємо як з разовими замовленнями, так і з серійним виробництвом.
@@ -252,6 +224,35 @@
 </section>
 
 
+<!-- ================= ПЕРЕВАГИ ================= -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 fade-up">Переваги співпраці з нами</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
+        <h3 class="font-semibold mb-2">Комплексний підхід</h3>
+        <p class="text-gray-700">
+          Від ідеї та дизайну — до виробництва, монтажу та сервісу. Вам не потрібно шукати окремих підрядників.
+        </p>
+      </div>
+      <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
+        <h3 class="font-semibold mb-2">Точність і повторюваність</h3>
+        <p class="text-gray-700">
+          Фрезерна порізка на ЧПУ дає стабільну якість деталей у кожній партії.
+        </p>
+      </div>
+      <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
+        <h3 class="font-semibold mb-2">Адекватні терміни</h3>
+        <p class="text-gray-700">
+          Плануємо виробництво так, щоб ви встигали до своїх дедлайнів. Прорахунок вартості — до 1 робочого дня.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ================= ЗАЛИШИТИ ЗАЯВКУ ================= -->
 <section id="contact" class="py-16 bg-[#E7972E] text-center text-white">
   <h2 class="text-4xl font-bold mb-4">Залишити заявку</h2>
@@ -263,32 +264,22 @@
     <p class="flex items-center space-x-2 text-xl">
       <span>📞</span><span>+38 096 244 37 24</span>
     </p>
+
     <p class="flex items-center space-x-2 text-xl">
       <span>✉️</span><span>info@frezalviv.com.ua</span>
     </p>
   </div>
 
   <form class="max-w-4xl mx-auto space-y-6">
-    <input
-      type="text"
-      placeholder="Ваше ім’я"
-      class="w-full p-4 rounded-lg text-gray-700"
-    />
-    <input
-      type="text"
-      placeholder="Телефон"
-      class="w-full p-4 rounded-lg text-gray-700"
-    />
-    <textarea
-      placeholder="Опишіть задачу або тип роботи"
-      rows="6"
-      class="w-full p-4 rounded-lg text-gray-700"
-    ></textarea>
+    <input type="text" placeholder="Ваше ім’я"
+           class="w-full p-4 rounded-lg text-gray-700" />
+    <input type="text" placeholder="Телефон"
+           class="w-full p-4 rounded-lg text-gray-700" />
+    <textarea placeholder="Опишіть задачу або тип роботи" rows="6"
+              class="w-full p-4 rounded-lg text-gray-700"></textarea>
 
-    <button
-      type="submit"
-      class="w-full py-4 bg-[#042030] text-white font-semibold rounded-lg hover:opacity-90 transition"
-    >
+    <button type="submit"
+            class="w-full py-4 bg-[#042030] text-white font-semibold rounded-lg hover:opacity-90 transition">
       Надіслати заявку
     </button>
   </form>
