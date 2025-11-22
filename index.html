@@ -8,7 +8,7 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-   <style>
+  <style>
     html {
       scroll-behavior: smooth;
     }
@@ -26,9 +26,15 @@
       }
     }
 
-    /* Прибрати іконку телефону перед номером у шапці */
+    /* щоб при переході по якорях контент не ховався під фіксованим header */
+    section[id] {
+      scroll-margin-top: 96px;
+    }
+
+    /* Прибрати можливу іконку телефону перед номером у шапці (якщо підтягується з зовнішнього CSS) */
     header a[href^="tel"]::before {
       content: none !important;
+      display: none !important;
     }
   </style>
 </head>
@@ -91,16 +97,16 @@
           Зовнішня реклама
         </a>
         <a href="#cnc"
-           class="px-6 py-3 rounded-lg border border-white/60 text-white font-semibold hover:bg-white hover:text-[#042030] transition">
+           class="px-6 py-3 rounded-lg border border-[#042030] text-[#042030] font-semibold hover:bg-[#042030] hover:text-white transition">
           Фрезерна порізка
         </a>
       </div>
     </div>
 
     <div class="fade-up">
-      <div class="bg-white/5 border border-white/10 rounded-3xl p-6">
-        <p class="text-sm uppercase tracking-wide text-white/70 mb-2">Для бізнесу та виробництва</p>
-        <p class="text-lg">
+      <div class="bg-[#F8F8F8] border border-gray-200 rounded-3xl p-6">
+        <p class="text-sm uppercase tracking-wide text-gray-500 mb-2">Для бізнесу та виробництва</p>
+        <p class="text-lg text-[#042030]">
           Працюємо з кафе, магазинами, брендами, виробництвами та приватними замовниками.
           Допомагаємо привести фасад і навігацію до єдиного стилю та оптимізувати витрати на виробництво.
         </p>
@@ -109,7 +115,6 @@
   </div>
 </section>
 
-<!-- далі твій код без змін -->
 
 <!-- ================= ЗОВНІШНЯ РЕКЛАМА ================= -->
 <section id="outdoor" class="py-20 bg-[#042030] text-white">
@@ -174,6 +179,7 @@
   </div>
 </section>
 
+
 <!-- ================= ФРЕЗЕРНА ПОРІЗКА ================= -->
 <section id="cnc" class="py-20 bg-white">
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
@@ -215,6 +221,7 @@
   </div>
 </section>
 
+
 <!-- ================= ПЕРЕВАГИ ================= -->
 <section class="py-16 bg-white">
   <div class="max-w-6xl mx-auto px-6">
@@ -242,6 +249,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- ================= ЗАЛИШИТИ ЗАЯВКУ ================= -->
 <section id="contact" class="py-16 bg-[#E7972E] text-center text-white">
@@ -274,6 +282,7 @@
     </button>
   </form>
 </section>
+
 
 <!-- ================= FOOTER ================= -->
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
