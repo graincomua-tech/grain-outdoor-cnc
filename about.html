@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Про нас — Grain</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Про нас — GRAIN</title>
   <meta name="description" content="Grain — виробництво зовнішньої реклами та професійна фрезерна порізка на ЧПУ у Львові. Власне виробництво, сучасне обладнання, гарантія якості.">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Якщо потрібні, залишаю твої файли стилів/скриптів -->
+  <link rel="stylesheet" href="/css/style.css" />
   <script src="/js/main.js" defer></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Щоб контент по якорях (якщо зʼявляться секції з id) не ховався під фіксованим header */
+    section[id] {
+      scroll-margin-top: 96px;
+    }
+
+    /* На випадок, якщо зовнішні стилі додають іконку перед телефоном */
+    header a[href^="tel"]::before {
+      content: none !important;
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body class="bg-white text-[#042030]">
 
+<!-- ================= HEADER (єдиний стиль з index.html) ================= -->
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
     <!-- ЛОГО -->
-    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
+    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
       GRAIN
     </a>
 
-    <!-- МЕНЮ -->
-    <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium">
+    <!-- МЕНЮ + ТЕЛЕФОН -->
+    <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
       <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">
         Зовнішня реклама
       </a>
@@ -37,37 +59,36 @@
       <a href="contacts.html" class="hover:text-[#E7972E] transition">
         Контакти
       </a>
-    </nav>
 
-    <!-- ТЕЛЕФОН + КНОПКА -->
-    <div class="hidden md:flex items-center gap-6">
       <a href="tel:+380962443724"
-         class="text-sm font-semibold text-[#042030] hover:text-[#E7972E] transition">
+         class="font-semibold text-[#042030] hover:text-[#E7972E] transition whitespace-nowrap">
         +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
       </a>
+    </nav>
 
-      <a href="https://t.me/+380962443724"
-         target="_blank"
-         rel="noopener"
-         class="px-6 py-2 rounded-lg bg-[#042030] text-sm text-white font-semibold hover:opacity-80 transition">
-        Замовити дзвінок
-      </a>
-    </div>
+    <!-- КНОПКА -->
+    <a href="https://t.me/+380962443724"
+       target="_blank"
+       rel="noopener"
+       class="px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
+      Замовити дзвінок
+    </a>
 
   </div>
 </header>
 
-<section class="pt-32 pb-20 px-6">
+<!-- ================= КОНТЕНТ "ПРО НАС" ================= -->
+<section class="pt-28 pb-20 px-6">
   <div class="max-w-4xl mx-auto">
     <h1 class="text-4xl font-bold mb-6">Про компанію Grain</h1>
 
     <p class="text-lg mb-4">
-      Grain — виробнича компанія у Львові, яка спеціалізується на виготовленні 
+      Grain — виробнича компанія у Львові, яка спеціалізується на виготовленні
       <b>зовнішньої реклами</b> та <b>фрезерній порізці на ЧПУ</b>.
     </p>
 
     <p class="text-lg mb-4">
-      Ми поєднуємо точність сучасного обладнання, досвід фахівців та індивідуальний підхід, 
+      Ми поєднуємо точність сучасного обладнання, досвід фахівців та індивідуальний підхід,
       щоб створювати продукцію, яка працює на ваш бізнес.
     </p>
 
@@ -89,10 +110,9 @@
   </div>
 </section>
 
-<footer class="py-10 bg-[#042030] text-white">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    © Grain, Львів — Зовнішня реклама та фрезерна порізка.
-  </div>
+<!-- ================= FOOTER (єдиний стиль з index.html) ================= -->
+<footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
+  <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
 
 </body>
