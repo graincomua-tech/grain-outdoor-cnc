@@ -3,256 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Наші роботи — зовнішня реклама | GRAIN</title>
+  <title>Портфоліо — Зовнішня реклама | GRAIN</title>
+  <meta name="description" content="Портфоліо зовнішньої реклами GRAIN: фасадні та інтер’єрні вивіски, контражур, неон, лайтбокси, торцеві вивіски, комплексне брендування та вивіски з композиту. Львів.">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* щоб контент з id не ховався під фіксованим header */
+    section[id] {
+      scroll-margin-top: 96px;
+    }
+
+    /* прибрати можливу іконку перед телефоном у шапці */
+    header a[href^="tel"]::before {
+      content: none !important;
+      display: none !important;
+    }
   </style>
 </head>
-<body class="bg-[#F4F6F8] text-[#042030]">
+<body class="bg-[#F8F8F8] text-[#042030]">
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- ЛІВА ЧАСТИНА -->
+    <div class="flex items-center gap-10">
+      <!-- Лого -->
+      <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
+        GRAIN
+      </a>
 
-    <!-- ЛОГО -->
-    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
-      GRAIN
-    </a>
+      <!-- Меню -->
+      <nav class="hidden md:flex items-center gap-8 text-sm md:text-base lg:text-lg font-medium">
+        <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+        <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+        <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
+        <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+        <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+      </nav>
+    </div>
 
-    <!-- МЕНЮ -->
-    <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium">
-      <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">
-        Зовнішня реклама
-      </a>
-      <a href="index.html#cnc" class="hover:text-[#E7972E] transition">
-        Фрезерна порізка
-      </a>
-      <a href="portfolio.html" class="hover:text-[#E7972E] transition">
-        Портфоліо
-      </a>
-      <a href="about.html" class="hover:text-[#E7972E] transition">
-        Про нас
-      </a>
-      <a href="contacts.html" class="hover:text-[#E7972E] transition">
-        Контакти
-      </a>
-    </nav>
-
-    <!-- ТЕЛЕФОН + КНОПКА -->
+    <!-- ПРАВА ЧАСТИНА -->
     <div class="hidden md:flex items-center gap-6">
       <a href="tel:+380962443724"
-         class="text-sm font-semibold text-[#042030] hover:text-[#E7972E] transition">
+         class="text-sm md:text-base font-semibold text-[#042030] hover:text-[#E7972E] transition">
         +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
       </a>
 
       <a href="https://t.me/+380962443724"
          target="_blank"
          rel="noopener"
-         class="px-6 py-2 rounded-lg bg-[#042030] text-sm text-white font-semibold hover:opacity-80 transition">
+         class="px-5 md:px-6 py-2 rounded-lg bg-[#042030] text-white text-sm md:text-base font-semibold hover:opacity-80 transition">
         Замовити дзвінок
       </a>
     </div>
-
   </div>
 </header>
 
-<main class="pt-10 pb-20 px-6">
+<!-- ================= HERO / INTRO ================= -->
+<section class="pt-32 pb-10 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
 
-    <!-- Хлібні крихти / повернення -->
-    <div class="mb-6">
+    <!-- Хлібні крихти -->
+    <div class="mb-4">
       <a href="portfolio.html" class="inline-flex items-center text-sm text-gray-500 hover:text-[#042030]">
         ← До загального портфоліо
       </a>
     </div>
 
-    <!-- Заголовок -->
-    <p class="uppercase tracking-[0.2em] text-xs text-gray-500 mb-3">Портфоліо</p>
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+    <p class="uppercase tracking-[0.2em] text-xs text-gray-500 mb-3 fade-up">
+      Портфоліо
+    </p>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-up">
       Наші роботи — зовнішня реклама
     </h1>
-    <p class="text-lg text-gray-700 mb-8 max-w-3xl">
-      Приклади вивісок, обʼємних літер, неонових рішень, лайтбоксів та фасадних конструкцій.
-      Показуємо реальні кейси для магазинів, кафе, салонів та виробництв.
+    <p class="text-lg text-gray-700 mb-8 max-w-3xl fade-up">
+      Приклади фасадних та інтер’єрних вивісок, контражурних літер, неонових рішень,
+      лайтбоксів, торцевих вивісок, комплексного брендування та конструкцій з композиту.
     </p>
 
-    <!-- Перемикач між двома портфоліо -->
-    <div class="flex flex-wrap gap-3 mb-10">
+    <!-- Перемикач між портфоліо -->
+    <div class="flex flex-wrap gap-3 mb-6 fade-up">
       <a href="portfolio-outdoor.html"
-         class="px-4 py-2 rounded-lg bg-[#042030] text-white font-semibold">
+         class="inline-flex items-center justify-center px-5 py-3 rounded-xl 
+                bg-[#042030] text-white font-semibold hover:opacity-90 transition">
         Зовнішня реклама
       </a>
       <a href="portfolio-cnc.html"
-         class="px-4 py-2 rounded-lg border border-[#042030]/40 text-[#042030] hover:bg-[#042030] hover:text-white transition">
+         class="px-5 py-3 rounded-xl border border-gray-300 text-sm md:text-base font-semibold text-gray-700 hover:bg-white">
         Фрезерна порізка
       </a>
     </div>
-
-    <!-- Фільтри -->
-    <div class="flex flex-wrap gap-3 mb-8">
-      <button class="filter-btn px-4 py-2 rounded-full bg-[#042030] text-white text-sm font-semibold"
-              data-filter="all">
-        Усі роботи
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
-              data-filter="composite">
-        Вивіски з композиту
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
-              data-filter="letters">
-        Обʼємні літери / контражур
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
-              data-filter="neon">
-        Неон / LED-неон
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
-              data-filter="lightbox">
-        Лайтбокси / торцеві
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-full bg-white text-sm text-gray-700 border border-gray-200"
-              data-filter="other">
-        Інші рішення
-      </button>
-    </div>
-
-    <!-- Сітка робіт -->
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <!-- Картка 1: композит -->
-      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
-               data-category="composite">
-        <!-- <img src="img/outdoor/outdoor-sign-1.jpg" alt="Фасадна вивіска з композиту та акрилу"
-             class="w-full h-56 object-cover" /> -->
-        <div class="p-5 flex-1 flex flex-col">
-          <h3 class="font-semibold text-lg mb-2">Фасадна вивіска з композиту та акрилу</h3>
-          <p class="text-sm text-gray-600 mb-3">
-            Композит + акрил, обʼємні літери, внутрішня LED-підсвітка. Монтаж на фасад магазину.
-          </p>
-          <p class="text-xs text-gray-500 mt-auto">
-            Розмір: 4000×900 мм · Локація: Львів
-          </p>
-        </div>
-      </article>
-
-      <!-- Картка 2: обʼємні літери -->
-      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
-               data-category="letters">
-        <!-- <img src="img/outdoor/outdoor-sign-2.jpg" alt="Контражурні обʼємні літери"
-             class="w-full h-56 object-cover" /> -->
-        <div class="p-5 flex-1 flex flex-col">
-          <h3 class="font-semibold text-lg mb-2">Контражурні обʼємні літери</h3>
-          <p class="text-sm text-gray-600 mb-3">
-            Алюмінієвий борт + акриловий фасад, контражурна підсвітка по периметру. Для кавʼярні.
-          </p>
-          <p class="text-xs text-gray-500 mt-auto">
-            Висота літер: 450 мм · Локація: Львівська область
-          </p>
-        </div>
-      </article>
-
-      <!-- Картка 3: неон -->
-      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
-               data-category="neon">
-        <!-- <img src="img/outdoor/outdoor-sign-3.jpg" alt="Неонова вивіска в інтерʼєрі"
-             class="w-full h-56 object-cover" /> -->
-        <div class="p-5 flex-1 flex flex-col">
-          <h3 class="font-semibold text-lg mb-2">Неонова вивіска в інтерʼєрі</h3>
-          <p class="text-sm text-gray-600 mb-3">
-            LED-неон на прозорому акрилі, теплий білий колір, кріплення до стіни через дистанційні втулки.
-          </p>
-          <p class="text-xs text-gray-500 mt-auto">
-            Ширина: 1200 мм · Локація: салон краси
-          </p>
-        </div>
-      </article>
-
-      <!-- Картка 4: лайтбокс / торцева -->
-      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
-               data-category="lightbox">
-        <!-- <img src="img/outdoor/outdoor-sign-4.jpg" alt="Торцева двостороння вивіска"
-             class="w-full h-56 object-cover" /> -->
-        <div class="p-5 flex-1 flex flex-col">
-          <h3 class="font-semibold text-lg mb-2">Торцева двостороння вивіска</h3>
-          <p class="text-sm text-gray-600 mb-3">
-            Металевий каркас, композитні боковини, акриловий фасад з підсвіткою. Добре помітна з тротуару.
-          </p>
-          <p class="text-xs text-gray-500 mt-auto">
-            800×600 мм · Локація: центр міста
-          </p>
-        </div>
-      </article>
-
-      <!-- Картка 5: лайтбокс -->
-      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
-               data-category="lightbox">
-        <!-- <img src="img/outdoor/outdoor-sign-5.jpg" alt="Лайтбокс над входом"
-             class="w-full h-56 object-cover" /> -->
-        <div class="p-5 flex-1 flex flex-col">
-          <h3 class="font-semibold text-lg mb-2">Лайтбокс над входом</h3>
-          <p class="text-sm text-gray-600 mb-3">
-            Алюмінієвий профіль, світлорозсіювальний акрил, друк плівки. Рівномірне світло без “зебри”.
-          </p>
-          <p class="text-xs text-gray-500 mt-auto">
-            2500×700 мм · Локація: магазин одягу
-          </p>
-        </div>
-      </article>
-
-      <!-- Картка 6: інші рішення -->
-      <article class="gallery-item bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col"
-               data-category="other">
-        <!-- <img src="img/outdoor/outdoor-sign-6.jpg" alt="Комплексне брендування фасаду"
-             class="w-full h-56 object-cover" /> -->
-        <div class="p-5 flex-1 flex flex-col">
-          <h3 class="font-semibold text-lg mb-2">Комплексне брендування фасаду</h3>
-          <p class="text-sm text-gray-600 mb-3">
-            Композитні панелі, обʼємні літери, навігаційні таблички та графіка на вітринах.
-          </p>
-          <p class="text-xs text-gray-500 mt-auto">
-            Повний комплекс робіт “під ключ”
-          </p>
-        </div>
-      </article>
-
-    </div>
   </div>
-</main>
+</section>
 
+<!-- ================= GRID РОБІТ ================= -->
+<section class="pb-20 px-6 bg-[#F8F8F8]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+
+    <!-- 1. Фасадні світлові вивіски -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Фасадні світлові вивіски</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Професійні світлові вивіски для фасадів магазинів, салонів, кафе та офісів.
+          Використовуємо акрил, композит, якісні LED-модулі з гарантією та продуманою конструкцією.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          Світлові літери · Вивіски з підсвіткою · Магазини та сервісні точки
+        </p>
+      </div>
+    </article>
+
+    <!-- 2. Фасадні несвітлові вивіски -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Фасадні несвітлові вивіски</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Бюджетні та довговічні рішення без підсвітки. Вивіски з композиту, пластику, ПВХ чи металу
+          з нанесенням плівки, друку або об’ємних елементів.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          Магазини · Офіси · Салони · Бізнес-центри
+        </p>
+      </div>
+    </article>
+
+    <!-- 3. Інтер’єрні вивіски -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Інтер’єрні вивіски</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Логотипи та декоративні елементи для reception, шоурумів, кав’ярень та офісів.
+          Комбінуємо акрил, неон, прозорий пластик, 3D-елементи та підсвітку.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          Інтер’єрний логотип · Зона ресепшн · Фото-зони
+        </p>
+      </div>
+    </article>
+
+    <!-- 4. Окремі літери, контражур -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Окремі літери, контражур</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Об’ємні окремі літери для фасаду та інтер’єру: світлові, несвітлові та з контражурною підсвіткою.
+          Акуратний борт, рівне світло по контуру, помітність з відстані вдень і вночі.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          Об’ємні літери · Контражур · Преміальні фасади
+        </p>
+      </div>
+    </article>
+
+    <!-- 5. Неон та акриловий неон -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Неон та акриловий неон</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          LED-неон під будь-який шрифт та форму: фрази, логотипи, стрілки, елементи декору.
+          Безпечний, яскравий та енергоефективний варіант для інтер’єру та вітрин.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          LED-неон · Акрилові основи · Інтер’єр та вітрини
+        </p>
+      </div>
+    </article>
+
+    <!-- 6. Лайтбокси -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Лайтбокси</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Односторонні та двосторонні світлові короби: класичні, slim та текстильні.
+          Рівномірне світіння без “плям”, продумана конструкція для сервісу та заміни зображень.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          Світлові короби · Вітрини · Фасади
+        </p>
+      </div>
+    </article>
+
+    <!-- 7. Торцеві вивіски -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Торцеві вивіски</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Вивіски, що розміщуються перпендикулярно до фасаду, добре помітні з тротуару та дороги.
+          Світлові та несвітлові варіанти, будь-які форми та розміри.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          Перпендикуляр до фасаду · Пішохідні зони · Вузькі вулиці
+        </p>
+      </div>
+    </article>
+
+    <!-- 8. Комплексне брендування фасаду -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Комплексне брендування фасаду</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Повний комплекс: вивіска, навігація, оформлення вітрин, інформаційні таблички,
+          вхідні групи та декоративні елементи. Працюємо “під ключ”.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          Проєкт · Виробництво · Монтаж · Сервіс
+        </p>
+      </div>
+    </article>
+
+    <!-- 9. Вивіски з композиту -->
+    <article class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col fade-up">
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-semibold text-lg mb-2">Вивіски з композиту</h3>
+        <p class="text-sm text-gray-600 mb-3">
+          Фасадні конструкції з композитних панелей (ACM): ідеально рівні площини та торці,
+          можливість фрезерування, інтеграції об’ємних літер та світлових елементів.
+        </p>
+        <p class="text-xs text-gray-500 mt-auto">
+          ACM-панелі · Довговічність · Преміальний вигляд
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
-
-<script>
-  const btns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.gallery-item');
-
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-
-      // стилі кнопок
-      btns.forEach(b => {
-        b.classList.remove('bg-[#042030]', 'text-white');
-        b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
-      });
-
-      btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
-      btn.classList.add('bg-[#042030]', 'text-white');
-
-      // фільтрація карток
-      cards.forEach(card => {
-        const category = card.dataset.category;
-        if (filter === 'all' || category === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
