@@ -1,207 +1,240 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфоліо — Фрезерна порізка | GRAIN</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body class="bg-[#F8F8F8] text-[#042030]">
-
-<!-- ================= HEADER ================= -->
-<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-
-    <!-- ЛОГО -->
-    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
-      GRAIN
-    </a>
-
-    <!-- МЕНЮ -->
-    <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium">
-      <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">
-        Зовнішня реклама
-      </a>
-      <a href="index.html#cnc" class="hover:text-[#E7972E] transition">
-        Фрезерна порізка
-      </a>
-      <a href="portfolio.html" class="hover:text-[#E7972E] transition">
-        Портфоліо
-      </a>
-      <a href="about.html" class="hover:text-[#E7972E] transition">
-        Про нас
-      </a>
-      <a href="contacts.html" class="hover:text-[#E7972E] transition">
-        Контакти
-      </a>
-    </nav>
-
-    <!-- ТЕЛЕФОН + КНОПКА -->
-    <div class="hidden md:flex items-center gap-6">
-      <a href="tel:+380962443724"
-         class="text-sm font-semibold text-[#042030] hover:text-[#E7972E] transition">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
-
-      <a href="https://t.me/+380962443724"
-         target="_blank"
-         rel="noopener"
-         class="px-6 py-2 rounded-lg bg-[#042030] text-sm text-white font-semibold hover:opacity-80 transition">
-        Замовити дзвінок
-      </a>
-    </div>
-
-  </div>
-</header>
-
-<!-- ================= HERO ================= -->
-<section class="pt-28 pb-10 px-6 bg-white">
+<!-- ================= CNC ПОРТФОЛІО ================= -->
+<section class="pt-24 pb-16 px-6 bg-white text-[#042030]">
   <div class="max-w-6xl mx-auto">
-    <p class="text-sm uppercase tracking-[0.2em] text-gray-500 mb-2 fade-up">
-      Портфоліо
-    </p>
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-up">
-      Наші роботи — фрезерна порізка
-    </h1>
-    <p class="text-lg max-w-3xl mb-6 fade-up">
-      Приклади деталей і виробів, виконаних на ЧПУ-фрезері: акрил, композит, фанера,
-      текстоліт, полікарбонат, технічні деталі та 3D-елементи.
-    </p>
+    <header class="mb-8">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">
+        Портфоліо фрезерної порізки
+      </h1>
+      <p class="text-lg text-gray-700">
+        Приклади робіт з акрилу, композиту, фанери, металу, пінопласту та дерева.
+      </p>
+    </header>
 
-    <!-- перемикач між двома портфоліо -->
-    <div class="flex flex-wrap gap-3 mb-4 fade-up">
-      <a href="portfolio-outdoor.html"
-         class="px-4 py-2 rounded-lg border border-[#042030]/40 text-[#042030] hover:bg-[#042030] hover:text-white transition">
-        Зовнішня реклама
-      </a>
-      <a href="portfolio-cnc.html"
-         class="px-4 py-2 rounded-lg bg-[#042030] text-white font-semibold">
-        Фрезерна порізка
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ФІЛЬТРИ ================= -->
-<section class="pb-6 px-6 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-wrap gap-3">
-      <button data-filter="all"
-              class="filter-btn px-4 py-2 rounded-full bg-[#042030] text-white text-sm font-medium">
+    <!-- ФІЛЬТРИ -->
+    <div class="flex flex-wrap gap-3 mb-10 text-sm sm:text-base">
+      <button
+        type="button"
+        class="px-4 py-2 rounded-full border border-gray-300 bg-[#042030] text-white font-medium transition hover:bg-[#042030]/90"
+        data-filter="all"
+      >
         Усі роботи
       </button>
-      <button data-filter="acrylic"
-              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
+      <button
+        type="button"
+        class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
+        data-filter="acrylic"
+      >
         Акрил / пластик
       </button>
-      <button data-filter="composite"
-              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
-        Композит
-      </button>
-      <button data-filter="plywood"
-              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
+      <button
+        type="button"
+        class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
+        data-filter="plywood"
+      >
         Фанера / МДФ
       </button>
-      <button data-filter="textolite"
-              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
-        Текстоліт
+      <button
+        type="button"
+        class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
+        data-filter="composite"
+      >
+        Композит
       </button>
-      <button data-filter="other"
-              class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-sm font-medium">
-        Інші деталі
+      <button
+        type="button"
+        class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
+        data-filter="metal"
+      >
+        Метал
       </button>
+      <button
+        type="button"
+        class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
+        data-filter="foam"
+      >
+        3D-пінопласт
+      </button>
+      <button
+        type="button"
+        class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
+        data-filter="wood"
+      >
+        Дерево / меблеві деталі
+      </button>
+    </div>
+
+    <!-- СІТКА КАРТОК -->
+    <div id="cnc-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- АКРИЛ -->
+      <article
+        class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        data-category="acrylic"
+      >
+        <div class="aspect-square overflow-hidden bg-gray-100">
+          <img
+            src="img/portfolio-cnc/IMG_0358.JPG"
+            alt="Фрезерована деталь з акрилу"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-1 text-sm sm:text-base">
+            Фрезерована деталь з акрилу
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600">
+            Акрил / пластик
+          </p>
+        </div>
+      </article>
+
+      <!-- ФАНЕРА / МДФ -->
+      <article
+        class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        data-category="plywood"
+      >
+        <div class="aspect-square overflow-hidden bg-gray-100">
+          <img
+            src="img/portfolio-cnc/IMG_2457.JPG"
+            alt="Фрезерування фанери"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-1 text-sm sm:text-base">
+            Фрезерування фанери
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600">
+            Фанера / МДФ
+          </p>
+        </div>
+      </article>
+
+      <!-- КОМПОЗИТ -->
+      <article
+        class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        data-category="composite"
+      >
+        <div class="aspect-square overflow-hidden bg-gray-100">
+          <img
+            src="img/portfolio-cnc/IMG_0456.JPG"
+            alt="Композитна панель після фрезерування"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-1 text-sm sm:text-base">
+            Композитна панель після фрезерування
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600">
+            Композит
+          </p>
+        </div>
+      </article>
+
+      <!-- ГРАВІЮВАННЯ МЕТАЛУ -->
+      <article
+        class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        data-category="metal"
+      >
+        <div class="aspect-square overflow-hidden bg-gray-100">
+          <img
+            src="img/portfolio-cnc/IMG_1175.JPG"
+            alt="Гравіювання логотипу на металевій табличці"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-1 text-sm sm:text-base">
+            Гравіювання металу
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600">
+            Метал, гравіювання на ЧПУ
+          </p>
+        </div>
+      </article>
+
+      <!-- 3D-ПІНОПЛАСТ -->
+      <article
+        class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        data-category="foam"
+      >
+        <div class="aspect-square overflow-hidden bg-gray-100">
+          <img
+            src="img/portfolio-cnc/IMG_1200.JPG"
+            alt="3D-фрезерування пінопласту"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-1 text-sm sm:text-base">
+            3D-фрезерування пінопласту
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600">
+            Пінопласт для 3D-моделей
+          </p>
+        </div>
+      </article>
+
+      <!-- ДЕРЕВО / МЕБЛЕВІ ДЕТАЛІ -->
+      <article
+        class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        data-category="wood,plywood"
+      >
+        <div class="aspect-square overflow-hidden bg-gray-100">
+          <img
+            src="img/portfolio-cnc/IMG_1193.JPG"
+            alt="Дерев'яні деталі після фрезерування"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-1 text-sm sm:text-base">
+            Меблеві деталі з дерева
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600">
+            Дерево, фасади та меблеві елементи
+          </p>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- ================= ГАЛЕРЕЯ ================= -->
-<section class="pb-20 px-6 bg-white">
-  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-    <div class="gallery-item acrylic fade-up">
-      <img src="img/cnc/acrylic-1.jpg"
-           alt="Фрезерована деталь з акрилу"
-           class="w-full h-64 object-cover rounded-2xl shadow" />
-    </div>
-
-    <div class="gallery-item composite fade-up">
-      <img src="img/cnc/composite-1.jpg"
-           alt="Композитна панель після фрезерування"
-           class="w-full h-64 object-cover rounded-2xl shadow" />
-    </div>
-
-    <div class="gallery-item plywood fade-up">
-      <img src="img/cnc/plywood-1.jpg"
-           alt="Фрезерування фанери"
-           class="w-full h-64 object-cover rounded-2xl shadow" />
-    </div>
-
-    <div class="gallery-item textolite fade-up">
-      <img src="img/cnc/textolite-1.jpg"
-           alt="Деталі з текстоліту"
-           class="w-full h-64 object-cover rounded-2xl shadow" />
-    </div>
-
-    <div class="gallery-item other fade-up">
-      <img src="img/cnc/other-1.jpg"
-           alt="Технічні деталі"
-           class="w-full h-64 object-cover rounded-2xl shadow" />
-    </div>
-
-    <div class="gallery-item other fade-up">
-      <img src="img/cnc/other-2.jpg"
-           alt="3D-елементи"
-           class="w-full h-64 object-cover rounded-2xl shadow" />
-    </div>
-
-  </div>
-</section>
-
+<!-- ФІЛЬТРАЦІЯ ПО КАТЕГОРІЯХ -->
 <script>
-  const buttons2 = document.querySelectorAll('.filter-btn');
-  const items2 = document.querySelectorAll('.gallery-item');
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("[data-filter]");
+    const cards = document.querySelectorAll("[data-category]");
 
-  buttons2.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const value = btn.dataset.filter;
 
-      // стилі кнопок
-      buttons2.forEach(b => {
-        b.classList.remove('bg-[#042030]', 'text-white');
-        b.classList.add('bg-gray-200');
-      });
-
-      btn.classList.remove('bg-gray-200');
-      btn.classList.add('bg-[#042030]', 'text-white');
-
-      // фільтрація карток
-      items2.forEach(item => {
-        if (filter === 'all' || item.classList.contains(filter)) {
-          item.style.display = 'block';
+        // активна кнопка
+        buttons.forEach((b) => {
+          b.classList.remove("bg-[#042030]", "text-white");
+          b.classList.add("bg-white", "text-[#042030]");
+        });
+        if (value === "all") {
+          btn.classList.remove("bg-white", "text-[#042030]");
+          btn.classList.add("bg-[#042030]", "text-white");
         } else {
-          item.style.display = 'none';
+          btn.classList.remove("bg-white", "text-[#042030]");
+          btn.classList.add("bg-[#042030]", "text-white");
         }
+
+        // фільтрація карток
+        cards.forEach((card) => {
+          const cats = card.dataset.category.split(",");
+          if (value === "all" || cats.includes(value)) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
       });
     });
   });
 </script>
-
-<footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
-  <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
-</footer>
-
-</body>
-</html>
