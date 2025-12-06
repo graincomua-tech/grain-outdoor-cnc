@@ -86,204 +86,73 @@
     <div class="max-w-6xl mx-auto">
       <header class="mb-8">
         <h1 class="text-3xl md:text-4xl font-bold mb-3">
-          Портфоліо фрезерної порізки
-        </h1>
-        <p class="text-lg text-gray-700">
-          Приклади робіт з акрилу, композиту, фанери, металу, пінопласту та дерева.
-        </p>
-      </header>
+          <!-- ================= ГАЛЕРЕЯ ФРЕЗЕРНОЇ ПОРІЗКИ ================= -->
+<section class="py-16 bg-[#F8F8F8]">
+  <div class="max-w-6xl mx-auto px-6">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Портфоліо фрезерної порізки</h1>
+    <p class="text-lg text-gray-700 mb-10">
+      Приклади робіт з акрилу, композиту, фанери, металу, пінопласту та дерева.
+    </p>
 
-      <!-- ФІЛЬТРИ -->
-      <div class="flex flex-wrap gap-3 mb-10 text-sm sm:text-base">
-        <button
-          type="button"
-          class="px-4 py-2 rounded-full border border-gray-300 bg-[#042030] text-white font-medium transition hover:bg-[#042030]/90"
-          data-filter="all"
-        >
-          Усі роботи
-        </button>
-        <button
-          type="button"
-          class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
-          data-filter="acrylic"
-        >
-          Акрил / пластик
-        </button>
-        <button
-          type="button"
-          class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
-          data-filter="plywood"
-        >
-          Фанера / МДФ
-        </button>
-        <button
-          type="button"
-          class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
-          data-filter="composite"
-        >
-          Композит
-        </button>
-        <button
-          type="button"
-          class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
-          data-filter="metal"
-        >
-          Метал
-        </button>
-        <button
-          type="button"
-          class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
-          data-filter="foam"
-        >
-          3D-пінопласт
-        </button>
-        <button
-          type="button"
-          class="px-4 py-2 rounded-full border border-gray-300 text-[#042030] font-medium bg-white hover:bg-[#F4F4F4] transition"
-          data-filter="wood"
-        >
-          Дерево / меблеві деталі
-        </button>
-      </div>
+    <div class="grid md:grid-cols-3 gap-8">
 
-      <!-- СІТКА КАРТОК -->
-      <div id="cnc-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- АКРИЛ -->
+      <article class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <img src="img/IMG_АКРИЛ.JPG" alt="Фрезерована деталь з акрилу" class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold mb-1">Фрезерована деталь з акрилу</h2>
+          <p class="text-sm text-gray-600">Акрил / пластик</p>
+        </div>
+      </article>
 
-        <!-- АКРИЛ -->
-        <article
-          class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          data-category="acrylic"
-        >
-          <div class="aspect-square overflow-hidden bg-gray-100">
-            <img
-              src="img/portfolio-cnc/IMG_0358.JPG"
-              alt="Фрезерована деталь з акрилу"
-              class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold mb-1 text-sm sm:text-base">
-              Фрезерована деталь з акрилу
-            </h3>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Акрил / пластик
-            </p>
-          </div>
-        </article>
+      <!-- ФАНЕРА -->
+      <article class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <img src="img/IMG_ФАНЕРА.JPG" alt="Фрезерування фанери" class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold mb-1">Фрезерування фанери</h2>
+          <p class="text-sm text-gray-600">Фанера / МДФ</p>
+        </div>
+      </article>
 
-        <!-- ФАНЕРА / МДФ -->
-        <article
-          class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          data-category="plywood"
-        >
-          <div class="aspect-square overflow-hidden bg-gray-100">
-            <img
-              src="img/portfolio-cnc/IMG_2457.JPG"
-              alt="Фрезерування фанери"
-              class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold mb-1 text-sm sm:text-base">
-              Фрезерування фанери
-            </h3>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Фанера / МДФ
-            </p>
-          </div>
-        </article>
+      <!-- КОМПОЗИТ -->
+      <article class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <img src="img/IMG_КОМПОЗИТ.JPG" alt="Композитна панель після фрезерування" class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold mb-1">Композитна панель після фрезерування</h2>
+          <p class="text-sm text-gray-600">Композит</p>
+        </div>
+      </article>
 
-        <!-- КОМПОЗИТ -->
-        <article
-          class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          data-category="composite"
-        >
-          <div class="aspect-square overflow-hidden bg-gray-100">
-            <img
-              src="img/portfolio-cnc/IMG_0456.JPG"
-              alt="Композитна панель після фрезерування"
-              class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold mb-1 text-sm sm:text-base">
-              Композитна панель після фрезерування
-            </h3>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Композит
-            </p>
-          </div>
-        </article>
+      <!-- МЕТАЛ -->
+      <article class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <img src="img/IMG_МЕТАЛ.JPG" alt="Гравіювання логотипу на металевій табличці" class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold mb-1">Гравіювання металу</h2>
+          <p class="text-sm text-gray-600">Метал, гравіювання на ЧПУ</p>
+        </div>
+      </article>
 
-        <!-- ГРАВІЮВАННЯ МЕТАЛУ -->
-        <article
-          class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          data-category="metal"
-        >
-          <div class="aspect-square overflow-hidden bg-gray-100">
-            <img
-              src="img/portfolio-cnc/IMG_1175.JPG"
-              alt="Гравіювання логотипу на металевій табличці"
-              class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold mb-1 text-sm sm:text-base">
-              Гравіювання металу
-            </h3>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Метал, гравіювання на ЧПУ
-            </p>
-          </div>
-        </article>
+      <!-- 3D-ПІНОПЛАСТ -->
+      <article class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <img src="img/IMG_3D-ПІНОПЛАСТ.JPG" alt="3D-фрезерування пінопласту" class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold mb-1">3D-фрезерування пінопласту</h2>
+          <p class="text-sm text-gray-600">Пінопласт для 3D-моделей</p>
+        </div>
+      </article>
 
-        <!-- 3D-ПІНОПЛАСТ -->
-        <article
-          class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          data-category="foam"
-        >
-          <div class="aspect-square overflow-hidden bg-gray-100">
-            <img
-              src="img/portfolio-cnc/IMG_1200.JPG"
-              alt="3D-фрезерування пінопласту"
-              class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold mb-1 text-sm sm:text-base">
-              3D-фрезерування пінопласту
-            </h3>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Пінопласт для 3D-моделей
-            </p>
-          </div>
-        </article>
+      <!-- ДЕРЕВО / МЕБЛЕВІ ДЕТАЛІ -->
+      <article class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <img src="img/IMG_МЕБЛЕВІ ДЕТАЛІ.JPG" alt="Дерев'яні меблеві деталі після фрезерування" class="w-full h-56 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold mb-1">Меблеві деталі з дерева</h2>
+          <p class="text-sm text-gray-600">Фрезерування деревини / меблеві деталі</p>
+        </div>
+      </article>
 
-        <!-- ДЕРЕВО / МЕБЛЕВІ ДЕТАЛІ -->
-        <article
-          class="group rounded-2xl overflow-hidden bg-[#F8F8F8] border border-gray-200 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          data-category="wood,plywood"
-        >
-          <div class="aspect-square overflow-hidden bg-gray-100">
-            <img
-              src="img/portfolio-cnc/IMG_1193.JPG"
-              alt="Дерев'яні деталі після фрезерування"
-              class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold mb-1 text-sm sm:text-base">
-              Меблеві деталі з дерева
-            </h3>
-            <p class="text-xs sm:text-sm text-gray-600">
-              Дерево, фасади та меблеві елементи
-            </p>
-          </div>
-        </article>
-
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
