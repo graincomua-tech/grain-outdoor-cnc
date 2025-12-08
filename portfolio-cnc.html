@@ -196,5 +196,35 @@
     </div>
   </section>
 </main>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".portfolio-card");
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+
+        // активна кнопка
+        filterButtons.forEach((b) => {
+          b.classList.remove("bg-[#042030]", "text-white");
+          b.classList.add("bg-white", "text-[#042030]", "border", "border-gray-300");
+        });
+        btn.classList.remove("bg-white", "text-[#042030]", "border", "border-gray-300");
+        btn.classList.add("bg-[#042030]", "text-white");
+
+        // фільтрація карток
+        cards.forEach((card) => {
+          const cat = card.dataset.category;
+          card.classList.remove("hidden");
+
+          if (filter !== "all" && cat !== filter) {
+            card.classList.add("hidden");
+          }
+        });
+      });
+    });
+  });
+</script>
 </body>
 </html>
