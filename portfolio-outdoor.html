@@ -321,6 +321,34 @@
     });
   });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const cards = document.querySelectorAll('[data-category]');
 
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Підсвітка активної кнопки
+        filterButtons.forEach((b) => {
+          b.classList.remove('bg-[#042030]', 'text-white');
+        });
+        btn.classList.add('bg-[#042030]', 'text-white');
+
+        // Показ/приховування карток
+        cards.forEach((card) => {
+          const category = card.dataset.category;
+
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
 </body>
 </html>
