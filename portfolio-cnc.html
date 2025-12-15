@@ -5,17 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Портфоліо фрезерної порізки | GRAIN</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    section[id] {
-      scroll-margin-top: 96px;
-    }
+    html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 96px; }
 
     .fade-up {
       opacity: 0;
@@ -24,10 +18,7 @@
     }
 
     @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     header a[href^="tel"]::before {
@@ -36,21 +27,123 @@
     }
   </style>
 </head>
+
 <body class="bg-[#F8F8F8] text-[#042030]">
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-
-    <!-- Лого + меню -->
     <div class="flex items-center gap-10">
-      <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
-        GRAIN
-      </a>
+      <a href="index.html" class="text-2xl font-bold">GRAIN</a>
+      <nav class="hidden md:flex gap-8 font-medium">
+        <a href="index.html#outdoor">Зовнішня реклама</a>
+        <a href="index.html#cnc">Фрезерна порізка</a>
+        <a href="portfolio.html">Портфоліо</a>
+        <a href="about.html">Про нас</a>
+        <a href="contacts.html">Контакти</a>
+      </nav>
+    </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-base font-medium">
-        <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-        <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
-        <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
-        <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-        <a href="contacts.html" class="hover:text-[#E797
+    <div class="hidden md:flex items-center gap-6">
+      <a href="tel:+380962443724" class="font-semibold">+38 096 244 37 24</a>
+      <a href="https://t.me/+380962443724" target="_blank"
+         class="px-6 py-2 rounded-lg bg-[#042030] text-white font-semibold">
+        Замовити дзвінок
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-28 pb-10 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <a href="portfolio.html" class="text-sm text-gray-500">← До загального портфоліо</a>
+    <h1 class="text-4xl font-bold mt-4 mb-4 fade-up">Портфоліо фрезерної порізки</h1>
+    <p class="text-lg text-gray-700 max-w-3xl fade-up">
+      Акрил, композит, фанера, метал, 3D-пінопласт та меблеві деталі.
+    </p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="pb-6 px-6 bg-white">
+  <div class="max-w-6xl mx-auto flex flex-wrap gap-3 mb-10">
+    <button data-filter="all" class="filter-btn px-6 py-2 rounded-full bg-[#042030] text-white font-semibold">Усі роботи</button>
+    <button data-filter="acrylic" class="filter-btn px-6 py-2 rounded-full border">Акрил / пластик</button>
+    <button data-filter="plywood" class="filter-btn px-6 py-2 rounded-full border">Фанера / дерево</button>
+    <button data-filter="composite" class="filter-btn px-6 py-2 rounded-full border">Композит</button>
+    <button data-filter="metal" class="filter-btn px-6 py-2 rounded-full border">Метал</button>
+    <button data-filter="foam" class="filter-btn px-6 py-2 rounded-full border">3D-пінопласт</button>
+    <button data-filter="furniture" class="filter-btn px-6 py-2 rounded-full border">Меблеві деталі</button>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pb-20 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <article class="card fade-up" data-category="acrylic">
+      <img src="/img/cnc/acrylic-1.jpg" class="w-full h-64 object-cover">
+      <div class="p-5"><h3>Акрилові деталі</h3></div>
+    </article>
+
+    <article class="card fade-up" data-category="plywood">
+      <img src="/img/cnc/plywood-1.jpg" class="w-full h-64 object-cover">
+      <div class="p-5"><h3>Фанера та дерево</h3></div>
+    </article>
+
+    <article class="card fade-up" data-category="composite">
+      <img src="/img/cnc/composite-1.jpg" class="w-full h-64 object-cover">
+      <div class="p-5"><h3>Композит</h3></div>
+    </article>
+
+    <article class="card fade-up" data-category="metal">
+      <img src="/img/cnc/metal-engraving-1.jpg" class="w-full h-64 object-cover">
+      <div class="p-5"><h3>Гравіювання металу</h3></div>
+    </article>
+
+    <article class="card fade-up" data-category="foam">
+      <img src="/img/cnc/foam-3d-1.jpg" class="w-full h-64 object-cover">
+      <div class="p-5"><h3>3D-пінопласт</h3></div>
+    </article>
+
+    <article class="card fade-up" data-category="furniture">
+      <img src="/img/cnc/furniture-1.jpg" class="w-full h-64 object-cover">
+      <div class="p-5"><h3>Меблеві деталі</h3></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 bg-[#042030] text-center text-white/70">
+  © GRAIN
+</footer>
+
+<!-- SCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('[data-category]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      buttons.forEach(b => b.classList.remove('bg-[#042030]', 'text-white'));
+      btn.classList.add('bg-[#042030]', 'text-white');
+
+      cards.forEach(card => {
+        card.classList.toggle('hidden',
+          filter !== 'all' && !card.dataset.category.includes(filter)
+        );
+      });
+    });
+  });
+
+  document.querySelector('[data-filter="all"]').click();
+});
+</script>
+
+</body>
+</html>
