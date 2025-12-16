@@ -1,92 +1,168 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Портфоліо фрезерної порізки | GRAIN</title>
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфоліо фрезерної порізки | GRAIN</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
 <body class="bg-[#F8F8F8] text-[#042030]">
 
+<!-- ================= HEADER ================= -->
 <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
     <a href="index.html" class="text-2xl font-bold">GRAIN</a>
-    <nav class="hidden md:flex gap-6 font-medium">
-      <a href="index.html#outdoor">Зовнішня реклама</a>
-      <a href="index.html#cnc">Фрезерна порізка</a>
-      <a href="portfolio.html">Портфоліо</a>
-      <a href="contacts.html">Контакти</a>
+
+    <nav class="flex gap-8 font-medium">
+      <a href="index.html#outdoor" class="hover:text-[#E7972E]">Зовнішня реклама</a>
+      <a href="index.html#cnc" class="hover:text-[#E7972E]">Фрезерна порізка</a>
+      <a href="portfolio.html" class="hover:text-[#E7972E]">Портфоліо</a>
+      <a href="contacts.html" class="hover:text-[#E7972E]">Контакти</a>
     </nav>
+
+    <a href="tel:+380962443724" class="font-semibold">
+      +38 096 244 37 24
+    </a>
   </div>
 </header>
 
-<section class="pt-28 px-6 max-w-6xl mx-auto">
-  <h1 class="text-4xl font-bold mb-6">Портфоліо фрезерної порізки</h1>
-
-  <!-- ФІЛЬТРИ -->
-  <div class="flex flex-wrap gap-3 mb-10">
-    <button class="filter-btn bg-[#042030] text-white px-5 py-2 rounded-full" data-filter="all">Усі</button>
-    <button class="filter-btn px-5 py-2 rounded-full border" data-filter="acrylic">Акрил</button>
-    <button class="filter-btn px-5 py-2 rounded-full border" data-filter="plywood">Фанера</button>
-    <button class="filter-btn px-5 py-2 rounded-full border" data-filter="composite">Композит</button>
-    <button class="filter-btn px-5 py-2 rounded-full border" data-filter="metal">Метал</button>
-    <button class="filter-btn px-5 py-2 rounded-full border" data-filter="foam">3D-пінопласт</button>
-    <button class="filter-btn px-5 py-2 rounded-full border" data-filter="furniture">Меблеві деталі</button>
+<!-- ================= HERO ================= -->
+<section class="pt-32 pb-12 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h1 class="text-4xl font-bold mb-4">Портфоліо фрезерної порізки</h1>
+    <p class="text-gray-600 max-w-3xl">
+      Приклади робіт ЧПУ-фрезерування: акрил, фанера, композит, метал, пінопласт та меблеві деталі.
+    </p>
   </div>
+</section>
 
-  <!-- ГАЛЕРЕЯ -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- ================= ФІЛЬТРИ ================= -->
+<section class="bg-white pb-6">
+  <div class="max-w-6xl mx-auto px-6 flex flex-wrap gap-3">
 
-    <a href="img/IMG_АКРИЛ.JPG" target="_blank" data-category="acrylic" class="card">
-      <img src="img/IMG_АКРИЛ.JPG" class="rounded-xl mb-3">
-      <h3 class="font-semibold">Акрилові деталі</h3>
-    </a>
-
-    <a href="img/IMG_ФАНЕРА.JPG" target="_blank" data-category="plywood" class="card">
-      <img src="img/IMG_ФАНЕРА.JPG" class="rounded-xl mb-3">
-      <h3 class="font-semibold">Фанера та дерево</h3>
-    </a>
-
-    <a href="img/IMG_КОМПОЗИТ.JPG" target="_blank" data-category="composite" class="card">
-      <img src="img/IMG_КОМПОЗИТ.JPG" class="rounded-xl mb-3">
-      <h3 class="font-semibold">Композит</h3>
-    </a>
-
-    <a href="img/IMG_МЕТАЛ.JPG" target="_blank" data-category="metal" class="card">
-      <img src="img/IMG_МЕТАЛ.JPG" class="rounded-xl mb-3">
-      <h3 class="font-semibold">Метал / гравіювання</h3>
-    </a>
-
-    <a href="img/IMG_3D-ПІНОПЛАСТ.JPG" target="_blank" data-category="foam" class="card">
-      <img src="img/IMG_3D-ПІНОПЛАСТ.JPG" class="rounded-xl mb-3">
-      <h3 class="font-semibold">3D-пінопласт</h3>
-    </a>
-
-    <a href="img/IMG_МЕБЛЕВІ ДЕТАЛІ.JPG" target="_blank" data-category="furniture" class="card">
-      <img src="img/IMG_МЕБЛЕВІ ДЕТАЛІ.JPG" class="rounded-xl mb-3">
-      <h3 class="font-semibold">Меблеві деталі</h3>
-    </a>
+    <button data-filter="all" class="filter-btn active">Усі</button>
+    <button data-filter="acrylic" class="filter-btn">Акрил</button>
+    <button data-filter="plywood" class="filter-btn">Фанера</button>
+    <button data-filter="composite" class="filter-btn">Композит</button>
+    <button data-filter="metal" class="filter-btn">Метал</button>
+    <button data-filter="foam" class="filter-btn">3D-пінопласт</button>
+    <button data-filter="furniture" class="filter-btn">Меблеві деталі</button>
 
   </div>
 </section>
 
+<style>
+  .filter-btn {
+    padding: 8px 18px;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    font-weight: 600;
+  }
+  .filter-btn.active {
+    background: #042030;
+    color: white;
+    border-color: #042030;
+  }
+</style>
+
+<!-- ================= ГАЛЕРЕЯ ================= -->
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- АКРИЛ -->
+      <a href="img/IMG_АКРИЛ.JPG" target="_blank"
+         data-category="acrylic"
+         class="card bg-white rounded-2xl overflow-hidden shadow">
+        <div class="aspect-[4/3]">
+          <img src="img/IMG_АКРИЛ.JPG" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="p-4 font-semibold">Акрилові деталі</div>
+      </a>
+
+      <!-- ФАНЕРА -->
+      <a href="img/IMG_ФАНЕРА.JPG" target="_blank"
+         data-category="plywood"
+         class="card bg-white rounded-2xl overflow-hidden shadow">
+        <div class="aspect-[4/3]">
+          <img src="img/IMG_ФАНЕРА.JPG" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="p-4 font-semibold">Фанера та дерево</div>
+      </a>
+
+      <!-- КОМПОЗИТ -->
+      <a href="img/IMG_КОМПОЗИТ.JPG" target="_blank"
+         data-category="composite"
+         class="card bg-white rounded-2xl overflow-hidden shadow">
+        <div class="aspect-[4/3]">
+          <img src="img/IMG_КОМПОЗИТ.JPG" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="p-4 font-semibold">Композит</div>
+      </a>
+
+      <!-- МЕТАЛ -->
+      <a href="img/IMG_МЕТАЛ.JPG" target="_blank"
+         data-category="metal"
+         class="card bg-white rounded-2xl overflow-hidden shadow">
+        <div class="aspect-[4/3]">
+          <img src="img/IMG_МЕТАЛ.JPG" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="p-4 font-semibold">Гравіювання по металу</div>
+      </a>
+
+      <!-- ПІНОПЛАСТ -->
+      <a href="img/IMG_3D-ПІНОПЛАСТ.JPG" target="_blank"
+         data-category="foam"
+         class="card bg-white rounded-2xl overflow-hidden shadow">
+        <div class="aspect-[4/3]">
+          <img src="img/IMG_3D-ПІНОПЛАСТ.JPG" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="p-4 font-semibold">3D-пінопласт</div>
+      </a>
+
+      <!-- МЕБЛІ -->
+      <a href="img/IMG_МЕБЛЕВІ_ДЕТАЛІ.JPG" target="_blank"
+         data-category="furniture"
+         class="card bg-white rounded-2xl overflow-hidden shadow">
+        <div class="aspect-[4/3]">
+          <img src="img/IMG_МЕБЛЕВІ_ДЕТАЛІ.JPG" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="p-4 font-semibold">Меблеві деталі</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCRIPT ================= -->
 <script>
-const buttons = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.card');
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.card');
 
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const filter = btn.dataset.filter;
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-    buttons.forEach(b => b.classList.remove('bg-[#042030]','text-white'));
-    btn.classList.add('bg-[#042030]','text-white');
+      const filter = btn.dataset.filter;
 
-    cards.forEach(card => {
-      card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
+      cards.forEach(card => {
+        card.style.display =
+          filter === 'all' || card.dataset.category === filter
+          ? 'block'
+          : 'none';
+      });
     });
   });
-});
 </script>
 
 </body>
