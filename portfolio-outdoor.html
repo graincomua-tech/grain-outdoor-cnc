@@ -5,322 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Портфоліо зовнішньої реклами | GRAIN</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    section[id] {
-      scroll-margin-top: 96px;
-    }
+    html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 96px; }
 
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
+      animation: fadeUp 0.6s forwards;
     }
 
     @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body class="bg-[#F8F8F8] text-[#042030]">
 
-<!-- ================= HEADER ================= -->
-<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="text-2xl font-bold">GRAIN</a>
 
-    <!-- Лого + меню -->
-    <div class="flex items-center gap-10">
-      <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030]">
-        GRAIN
-      </a>
+    <nav class="hidden md:flex gap-8 font-medium">
+      <a href="index.html#outdoor">Зовнішня реклама</a>
+      <a href="index.html#cnc">Фрезерна порізка</a>
+      <a href="portfolio.html">Портфоліо</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
 
-      <nav class="hidden md:flex items-center gap-8 text-base font-medium">
-        <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-        <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
-        <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
-        <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-        <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-      </nav>
-    </div>
-
-    <!-- Телефон + кнопка -->
-    <div class="hidden md:flex items-center gap-6">
-      <a href="tel:+380962443724"
-         class="text-base font-semibold text-[#042030] hover:text-[#E7972E] transition">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
-
-      <a href="https://t.me/+380962443724"
-         target="_blank"
-         rel="noopener"
-         class="px-6 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
-        Замовити дзвінок
-      </a>
-    </div>
-
+    <a href="tel:+380962443724" class="font-semibold">
+      +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
+    </a>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="pt-28 pb-10 px-6 bg-white">
+<!-- HERO -->
+<section class="pt-28 pb-10 bg-white px-6">
   <div class="max-w-6xl mx-auto">
-    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 fade-up">
+    <a href="portfolio.html" class="text-sm text-gray-500">← До загального портфоліо</a>
+
+    <h1 class="text-4xl font-bold mt-4 mb-3">
       Портфоліо зовнішньої реклами
     </h1>
-    <p class="text-lg text-gray-700 max-w-3xl fade-up">
-      Приклади фасадних і інтер’єрних вивісок, неону, контражуру, лайтбоксів, торцевих вивісок,
-      комплексного брендування фасадів та вивісок з композиту.
+
+    <p class="text-gray-700 max-w-3xl">
+      Вивіски, неон, лайтбокси, брендування, контражур та фасадні рішення.
     </p>
-
-    <!-- Повернення до загального портфоліо -->
-    <div class="mt-4">
-      <a href="portfolio.html"
-         class="inline-flex items-center text-sm text-gray-500 hover:text-[#042030]">
-        ← До загального портфоліо
-      </a>
-    </div>
   </div>
 </section>
 
-<!-- ================= ФІЛЬТРИ ================= -->
-<section class="pb-6 px-6 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-wrap gap-3 mb-10">
-      <button data-filter="all"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-[#042030] text-white text-sm md:text-base font-semibold">
-        Усі роботи
-      </button>
-
-      <button data-filter="signs"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
-        Світлові / несвітлові вивіски
-      </button>
-
-      <button data-filter="neon"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
-        Неон
-      </button>
-
-      <button data-filter="kontrazhur"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
-        Контражур
-      </button>
-
-      <button data-filter="lightbox"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
-        Лайтбокси
-      </button>
-
-      <button data-filter="torcevi"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
-        Торцеві вивіски
-      </button>
-
-      <button data-filter="composite"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
-        Вивіски з композиту
-      </button>
-
-      <button data-filter="branding"
-              class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
-        Комплексне брендування
-      </button>
-    </div>
+<!-- FILTERS -->
+<section class="bg-white px-6 pb-8">
+  <div class="max-w-6xl mx-auto flex flex-wrap gap-3">
+    <button data-filter="all" class="filter-btn bg-[#042030] text-white px-6 py-2 rounded-full">Усі</button>
+    <button data-filter="sign" class="filter-btn px-6 py-2 rounded-full border">Вивіски</button>
+    <button data-filter="neon" class="filter-btn px-6 py-2 rounded-full border">Неон</button>
+    <button data-filter="lightbox" class="filter-btn px-6 py-2 rounded-full border">Лайтбокси</button>
+    <button data-filter="kontrazhur" class="filter-btn px-6 py-2 rounded-full border">Контражур</button>
+    <button data-filter="branding" class="filter-btn px-6 py-2 rounded-full border">Брендування</button>
+    <button data-filter="side" class="filter-btn px-6 py-2 rounded-full border">Фасади</button>
+    <button data-filter="composite" class="filter-btn px-6 py-2 rounded-full border">Композит</button>
   </div>
 </section>
 
-<!-- ================= ГАЛЕРЕЯ ================= -->
-<section class="pb-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- GRID -->
+<section class="px-6 pb-20">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Світлова фасадна вивіска (signs) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-fasad-1.jpg" alt="Фасадна світлова вивіска кафе"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Фасадна світлова вивіска</h3>
-          <p class="text-sm text-gray-600">Світлова вивіска для кав’ярні</p>
-        </div>
-      </article>
+    <!-- ВИВІСКИ -->
+    <article data-category="sign" class="card">
+      <img src="/img/outdoor/sign-1.JPG" />
+      <h3>Вивіски</h3>
+    </article>
 
-      <!-- Інтер’єрна несвітлова вивіска (signs) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-interior-1.jpg" alt="Інтер’єрна несвітлова вивіска"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Інтер’єрна несвітлова вивіска</h3>
-          <p class="text-sm text-gray-600">Логотип на стіні в торговій залі</p>
-        </div>
-      </article>
+    <article data-category="sign" class="card">
+      <img src="/img/outdoor/sign-2.JPG" />
+      <h3>Вивіски</h3>
+    </article>
 
-      <!-- Неонова вивіска з контражуром (neon + kontrazhur) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="neon kontrazhur">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-neon-1.jpg" alt="Неонова вивіска з контражуром"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Неонова вивіска з контражуром</h3>
-          <p class="text-sm text-gray-600">LED-неон по акрилу з підсвіткою по контуру</p>
-        </div>
-      </article>
+    <!-- НЕОН -->
+    <article data-category="neon kontrazhur" class="card">
+      <img src="/img/outdoor/neon-1.JPG" />
+      <h3>Неон</h3>
+    </article>
 
-      <!-- Окремі об’ємні літери, контражур (kontrazhur + signs) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="kontrazhur signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-letters-1.jpg" alt="Об’ємні окремі літери з контражуром"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Окремі об’ємні літери</h3>
-          <p class="text-sm text-gray-600">Контражурна підсвітка по фасаду будівлі</p>
-        </div>
-      </article>
+    <article data-category="neon kontrazhur" class="card">
+      <img src="/img/outdoor/neon-2.JPG" />
+      <h3>Неон</h3>
+    </article>
 
-      <!-- Лайтбокс (lightbox + signs) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="lightbox signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-lightbox-1.jpg" alt="Класичний лайтбокс"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Лайтбокс для магазину</h3>
-          <p class="text-sm text-gray-600">Світловий короб з рівномірним підсвічуванням</p>
-        </div>
-      </article>
+    <!-- ЛАЙТБОКС -->
+    <article data-category="lightbox" class="card">
+      <img src="/img/outdoor/lightbox-1.JPG" />
+      <h3>Лайтбокси</h3>
+    </article>
 
-      <!-- Slim-лайтбокс / акриллайт (lightbox) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="lightbox">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-slimlight-1.jpg" alt="Slim-лайтбокс, акриллайт"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Slim-лайтбокс в інтер’єрі</h3>
-          <p class="text-sm text-gray-600">Тонкий акриловий лайтбокс з однорідним світлом</p>
-        </div>
-      </article>
+    <!-- КОНТРАЖУР -->
+    <article data-category="kontrazhur" class="card">
+      <img src="/img/outdoor/kontrazhur-1.JPG" />
+      <h3>Контражур</h3>
+    </article>
 
-      <!-- Торцева вивіска (torcevi + signs) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="torcevi signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-side-1.jpg" alt="Торцева вивіска над тротуаром"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Торцева вивіска</h3>
-          <p class="text-sm text-gray-600">Добре помітна з тротуару та дороги</p>
-        </div>
-      </article>
+    <!-- БРЕНДУВАННЯ -->
+    <article data-category="branding" class="card">
+      <img src="/img/outdoor/branding-1.JPG" />
+      <h3>Брендування</h3>
+    </article>
 
-      <!-- Вивіска з композиту (composite + signs) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="composite signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-composite-1.jpg" alt="Фасад з композитних панелей"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Вивіска з композиту</h3>
-          <p class="text-sm text-gray-600">Композитна панель з об’ємними літерами</p>
-        </div>
-      </article>
+    <!-- ФАСАДИ -->
+    <article data-category="side" class="card">
+      <img src="/img/outdoor/side-1.JPG" />
+      <h3>Фасадні елементи</h3>
+    </article>
 
-      <!-- Комплексне брендування фасаду (branding + composite + signs + lightbox) -->
-      <article
-        class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up"
-        data-category="branding composite signs lightbox">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor-branding-1.jpg" alt="Комплексне брендування фасаду"
-               class="w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Комплексне брендування фасаду</h3>
-          <p class="text-sm text-gray-600">
-            Композит, окремі літери, лайтбокс та навігація в одному стилі
-          </p>
-        </div>
-      </article>
+    <!-- КОМПОЗИТ -->
+    <article data-category="composite" class="card">
+      <img src="/img/outdoor/composite-1.JPG" />
+      <h3>Композит</h3>
+    </article>
 
-    </div>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="py-16 bg-[#E7972E] text-center text-white">
-  <h2 class="text-3xl md:text-4xl font-bold mb-4">Потрібна вивіска або брендування фасаду?</h2>
-  <p class="text-lg mb-8">
-    Надішліть макет або опишіть задачу — підготуємо прорахунок та запропонуємо оптимальний варіант.
-  </p>
-
-  <a href="contacts.html"
-     class="inline-block px-8 py-3 rounded-lg bg-white text-[#042030] font-semibold hover:opacity-90 transition">
-    Перейти до контактів
-  </a>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
-  <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
+<!-- FOOTER -->
+<footer class="bg-[#042030] text-white/70 text-center py-6 text-sm">
+  © GRAIN — зовнішня реклама
 </footer>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- SCRIPTS -->
 <script>
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const buttons = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('[data-category]');
 
-  filterButtons.forEach(btn => {
+  buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
 
-      // стилі для всіх кнопок
-      filterButtons.forEach(b => {
-        b.classList.remove('bg-[#042030]', 'text-white');
-        b.classList.add('bg-white', 'text-[#042030]', 'border', 'border-gray-200');
-      });
-
-      // активна кнопка
-      btn.classList.remove('bg-white', 'text-[#042030]');
+      buttons.forEach(b => b.classList.remove('bg-[#042030]', 'text-white'));
       btn.classList.add('bg-[#042030]', 'text-white');
 
-      // фільтрація карток
       cards.forEach(card => {
-        const categories = card.dataset.category.split(' ');
-        if (filter === 'all' || categories.includes(filter)) {
+        if (filter === 'all' || card.dataset.category.includes(filter)) {
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');
@@ -329,6 +158,24 @@
     });
   });
 </script>
+
+<style>
+  .card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .card h3 {
+    padding: 14px 18px;
+    font-weight: 600;
+  }
+</style>
 
 </body>
 </html>
