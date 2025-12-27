@@ -3,67 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Прайс на фрезерну порізку — GRAIN</title>
-  <meta name="description" content="Актуальні ціни на фрезерну порізку на ЧПУ: акрил, ПВХ, композит, фанера та інші матеріали.">
+  <title>Прайс на фрезерну порізку | GRAIN</title>
+  <meta name="description" content="Актуальні ціни на фрезерну порізку на ЧПУ: акрил, ПВХ, композит, фанера та інші матеріали." />
 
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Ваші стилі -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
-<body class="bg-white text-[#042030]">
+<body class="bg-[#F8F8F8] text-[#042030]">
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
   <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
-      <a href="/" class="text-lg hover:text-[#E7972E] transition">На головну</a>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- ЛОГО -->
+      <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
+        GRAIN
+      </a>
+
+      <!-- МЕНЮ + ТЕЛЕФОН -->
+      <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
+        <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+        <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+        <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
+        <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+        <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+
+        <a href="tel:+380962443724"
+           class="font-semibold text-[#042030] hover:text-[#E7972E] transition whitespace-nowrap">
+          +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
+        </a>
+      </nav>
+
+      <!-- КНОПКА -->
+      <a href="https://t.me/+380962443724"
+         target="_blank"
+         rel="noopener"
+         class="px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
+        Замовити дзвінок
+      </a>
+
     </div>
   </header>
 
-  <!-- CONTENT -->
-  <section class="pt-32 pb-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-4xl font-bold mb-4">Прайс на фрезерну порізку</h1>
+  <!-- ================= CONTENT ================= -->
+  <main class="pt-28 md:pt-32 pb-16">
+    <div class="max-w-6xl mx-auto px-6">
 
-      <p class="text-lg text-gray-700 max-w-3xl mb-8">
-        Актуальні ціни на фрезерну порізку на ЧПУ: акрил, ПВХ, композит, фанера та інші матеріали.
-        Натисніть «Відкрити прайс» — файл відкриється у новій вкладці.
+      <!-- Breadcrumbs -->
+      <nav class="text-sm text-gray-500 mb-6">
+        <a href="index.html" class="hover:text-gray-700">Головна</a>
+        <span class="mx-2">/</span>
+        <a href="portfolio.html" class="hover:text-gray-700">Портфоліо</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900 font-medium">Прайс фрезерної порізки</span>
+      </nav>
+
+      <!-- Title -->
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        Прайс на фрезерну порізку
+      </h1>
+
+      <!-- Description -->
+      <p class="text-gray-600 max-w-3xl mb-10">
+        Актуальні ціни на фрезерування на ЧПУ. Натисніть “Відкрити прайс” — PDF відкриється у новій вкладці.
       </p>
 
-      <!-- BUTTONS -->
-      <div class="flex flex-wrap gap-3 mb-10">
-        <a href="/price/cnc-price.pdf"
-           target="_blank"
-           rel="noopener"
-           class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#042030] text-white font-semibold hover:opacity-90 transition">
+      <!-- Actions -->
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="/price/cnc-price.pdf" target="_blank" rel="noopener"
+           class="px-6 py-3 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
           Відкрити прайс (PDF)
         </a>
 
-        <a href="/price/cnc-price.pdf"
-           download
-           class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-gray-200 bg-white text-[#042030] font-semibold hover:bg-gray-50 transition">
-          Завантажити
+        <a href="/price/cnc-price.pdf" download
+           class="px-6 py-3 rounded-lg border border-gray-300 bg-white font-semibold hover:bg-gray-50 transition">
+          Завантажити PDF
         </a>
       </div>
 
-      <!-- EMBED PDF -->
-      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <div class="px-5 py-4 border-b border-gray-100">
-          <h2 class="text-lg font-semibold">Перегляд прайсу</h2>
-          <p class="text-sm text-gray-600">Якщо PDF не відображається — скористайтеся кнопками вище.</p>
+      <!-- Info блок -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
+          <h3 class="font-semibold mb-2">Формат прайсу</h3>
+          <p class="text-gray-600 text-sm">
+            PDF-файл з таблицею цін. Якщо потрібно — зробимо окремий прайс для опту та спеціальні ціни для підрозділів.
+          </p>
         </div>
 
-        <div class="w-full" style="height: 75vh;">
-          <iframe
-            src="/price/cnc-price.pdf"
-            title="Прайс на фрезерну порізку"
-            class="w-full h-full"
-          ></iframe>
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
+          <h3 class="font-semibold mb-2">Як замовити</h3>
+          <p class="text-gray-600 text-sm">
+            Надішліть креслення/макет і матеріал — швидко порахуємо та підкажемо оптимізацію розкрою.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
+          <h3 class="font-semibold mb-2">Контакти</h3>
+          <p class="text-gray-600 text-sm">
+            Телефон: <a class="font-semibold hover:text-[#E7972E] transition" href="tel:+380962443724">+38 096 244 37 24</a><br>
+            Telegram: <a class="font-semibold hover:text-[#E7972E] transition" href="https://t.me/+380962443724" target="_blank" rel="noopener">написати</a>
+          </p>
         </div>
       </div>
 
     </div>
-  </section>
+  </main>
 
 </body>
 </html>
