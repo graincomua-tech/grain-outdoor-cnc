@@ -12,19 +12,10 @@
     html { scroll-behavior: smooth; }
     section[id] { scroll-margin-top: 96px; }
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
-    }
+    header a[href^="tel"]::before { content: none !important; display: none !important; }
   </style>
 </head>
 
@@ -68,13 +59,10 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="pt-28 pb-10 px-6 bg-white">
+<section class="pt-28 pb-8 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
-
-    <!-- Хлібні крихти -->
     <div class="mb-4">
-      <a href="portfolio.html"
-         class="inline-flex items-center text-sm text-gray-500 hover:text-[#042030]">
+      <a href="portfolio.html" class="inline-flex items-center text-sm text-gray-500 hover:text-[#042030]">
         ← До загального портфоліо
       </a>
     </div>
@@ -83,7 +71,7 @@
       Портфоліо зовнішньої реклами
     </h1>
     <p class="text-lg text-gray-700 max-w-3xl fade-up">
-      Вивіски, неон, лайтбокси, брендування, контражур, фасадні рішення та композит.
+      Вивіски, неон, лайтбокси, брендування, контражур, фасади та композитні рішення.
     </p>
   </div>
 </section>
@@ -92,47 +80,39 @@
 <section class="pb-6 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-wrap gap-3 mb-10">
-
-      <button data-filter="all"
+      <button
+        data-filter="all"
         class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-[#042030] text-white text-sm md:text-base font-semibold">
         Усі
       </button>
 
-      <button data-filter="signs"
-        class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
+      <button data-filter="sign" class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
         Вивіски
       </button>
 
-      <button data-filter="neon"
-        class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
+      <button data-filter="neon" class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
         Неон
       </button>
 
-      <button data-filter="lightbox"
-        class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
+      <button data-filter="lightbox" class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
         Лайтбокси
       </button>
 
-      <button data-filter="kontrazhur"
-        class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
+      <button data-filter="kontrazhur" class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
         Контражур
       </button>
 
-      <button data-filter="branding"
-        class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
+      <button data-filter="branding" class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
         Брендування
       </button>
 
-      <button data-filter="fasad"
-        class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
+      <button data-filter="side" class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
         Фасади
       </button>
 
-      <button data-filter="composite"
-        class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
+      <button data-filter="composite" class="filter-btn px-6 py-2 rounded-full border border-gray-200 bg-white text-sm md:text-base font-semibold hover:border-[#042030]">
         Композит
       </button>
-
     </div>
   </div>
 </section>
@@ -142,290 +122,319 @@
   <div class="max-w-6xl mx-auto">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- ===== ВИВІСКИ (sign-*.JPG) ===== -->
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="signs fasad">
+      <!-- ================= ВИВІСКИ (sign-*.JPG) ================= -->
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="sign">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/sign-1.JPG" alt="Вивіска 1" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/sign-1.JPG" alt="Вивіска"
+               class="w-full h-full object-cover"
+               onerror="this.onerror=null; this.src='img/outdoor/sign-2.JPG';" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Вивіска</h3>
-          <p class="text-sm text-gray-600">Приклад виконаної вивіски</p>
+          <h3 class="font-semibold text-lg mb-1">Вивіски</h3>
+          <p class="text-sm text-gray-600">Реалізовані проєкти зовнішніх вивісок.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="signs fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="sign">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/sign-2.JPG" alt="Вивіска 2" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/sign-2.JPG" alt="Вивіска"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Вивіска</h3>
-          <p class="text-sm text-gray-600">Приклад виконаної вивіски</p>
+          <h3 class="font-semibold text-lg mb-1">Вивіски</h3>
+          <p class="text-sm text-gray-600">Реалізовані проєкти зовнішніх вивісок.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="signs fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="sign">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/sign-3.JPG" alt="Вивіска 3" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/sign-3.JPG" alt="Вивіска"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Вивіска</h3>
-          <p class="text-sm text-gray-600">Приклад виконаної вивіски</p>
+          <h3 class="font-semibold text-lg mb-1">Вивіски</h3>
+          <p class="text-sm text-gray-600">Реалізовані проєкти зовнішніх вивісок.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="signs fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="sign">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/sign-4.JPG" alt="Вивіска 4" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/sign-4.JPG" alt="Вивіска"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Вивіска</h3>
-          <p class="text-sm text-gray-600">Приклад виконаної вивіски</p>
+          <h3 class="font-semibold text-lg mb-1">Вивіски</h3>
+          <p class="text-sm text-gray-600">Реалізовані проєкти зовнішніх вивісок.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="signs fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="sign">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/sign-5.JPG" alt="Вивіска 5" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/sign-5.JPG" alt="Вивіска"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Вивіска</h3>
-          <p class="text-sm text-gray-600">Приклад виконаної вивіски</p>
+          <h3 class="font-semibold text-lg mb-1">Вивіски</h3>
+          <p class="text-sm text-gray-600">Реалізовані проєкти зовнішніх вивісок.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="signs fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="sign">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/sign-6.JPG" alt="Вивіска 6" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/sign-6.JPG" alt="Вивіска"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Вивіска</h3>
-          <p class="text-sm text-gray-600">Приклад виконаної вивіски</p>
+          <h3 class="font-semibold text-lg mb-1">Вивіски</h3>
+          <p class="text-sm text-gray-600">Реалізовані проєкти зовнішніх вивісок.</p>
         </div>
       </article>
 
-      <!-- ===== НЕОН (neon-*.JPG) ===== -->
+      <!-- ================= НЕОН (neon-*.JPG) ================= -->
       <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="neon">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/neon-1.JPG" alt="Неон 1" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/neon-1.JPG" alt="Неон"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Неон</h3>
-          <p class="text-sm text-gray-600">LED-неон / декоративне світло</p>
+          <p class="text-sm text-gray-600">Неонові рішення для інтер’єру та вітрин.</p>
         </div>
       </article>
 
       <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="neon">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/neon-2.JPG" alt="Неон 2" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/neon-2.JPG" alt="Неон"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Неон</h3>
-          <p class="text-sm text-gray-600">LED-неон / декоративне світло</p>
+          <p class="text-sm text-gray-600">Неонові рішення для інтер’єру та вітрин.</p>
         </div>
       </article>
 
       <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="neon">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/neon-3.JPG" alt="Неон 3" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/neon-3.JPG" alt="Неон"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Неон</h3>
-          <p class="text-sm text-gray-600">LED-неон / декоративне світло</p>
+          <p class="text-sm text-gray-600">Неонові рішення для інтер’єру та вітрин.</p>
         </div>
       </article>
 
-      <!-- ===== ЛАЙТБОКСИ (lightbox-*.JPG) ===== -->
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="lightbox fasad">
+      <!-- ================= ЛАЙТБОКСИ (lightbox-*.JPG) ================= -->
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="lightbox">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/lightbox-1.JPG" alt="Лайтбокс 1" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/lightbox-1.JPG" alt="Лайтбокс"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Лайтбокс</h3>
-          <p class="text-sm text-gray-600">Світловий короб / рівномірна підсвітка</p>
+          <h3 class="font-semibold text-lg mb-1">Лайтбокси</h3>
+          <p class="text-sm text-gray-600">Світлові короби та панелі.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="lightbox fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="lightbox">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/lightbox-2.JPG" alt="Лайтбокс 2" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/lightbox-2.JPG" alt="Лайтбокс"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Лайтбокс</h3>
-          <p class="text-sm text-gray-600">Світловий короб / рівномірна підсвітка</p>
+          <h3 class="font-semibold text-lg mb-1">Лайтбокси</h3>
+          <p class="text-sm text-gray-600">Світлові короби та панелі.</p>
         </div>
       </article>
 
-      <!-- ===== КОНТРАЖУР (kontrazhur-*.JPG) ===== -->
+      <!-- ================= КОНТРАЖУР (kontrazhur-*.JPG) ================= -->
       <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="kontrazhur">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/kontrazhur-1.JPG" alt="Контражур 1" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/kontrazhur-1.JPG" alt="Контражур"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Контражур</h3>
-          <p class="text-sm text-gray-600">Підсвітка по контуру / ззаду</p>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="kontrazhur">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/kontrazhur-2.JPG" alt="Контражур 2" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Контражур</h3>
-          <p class="text-sm text-gray-600">Підсвітка по контуру / ззаду</p>
+          <p class="text-sm text-gray-600">Об’ємні елементи з підсвіткою по контуру.</p>
         </div>
       </article>
 
       <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="kontrazhur">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/kontrazhur-3.JPG" alt="Контражур 3" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/kontrazhur-2.JPG" alt="Контражур"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Контражур</h3>
-          <p class="text-sm text-gray-600">Підсвітка по контуру / ззаду</p>
+          <p class="text-sm text-gray-600">Об’ємні елементи з підсвіткою по контуру.</p>
         </div>
       </article>
 
       <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="kontrazhur">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/kontrazhur-4.JPG" alt="Контражур 4" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/kontrazhur-3.JPG" alt="Контражур"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Контражур</h3>
-          <p class="text-sm text-gray-600">Підсвітка по контуру / ззаду</p>
+          <p class="text-sm text-gray-600">Об’ємні елементи з підсвіткою по контуру.</p>
         </div>
       </article>
 
-      <!-- ===== БРЕНДУВАННЯ (branding-*.JPG) ===== -->
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="kontrazhur">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/branding-1.JPG" alt="Брендування 1" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/kontrazhur-4.JPG" alt="Контражур"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-1">Контражур</h3>
+          <p class="text-sm text-gray-600">Об’ємні елементи з підсвіткою по контуру.</p>
+        </div>
+      </article>
+
+      <!-- ================= БРЕНДУВАННЯ (branding-*.JPG) ================= -->
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="img/outdoor/branding-1.JPG" alt="Брендування"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Брендування</h3>
-          <p class="text-sm text-gray-600">Комплексне оформлення / стиль</p>
+          <p class="text-sm text-gray-600">Оформлення, логотипи, елементи айдентики.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/branding-2.JPG" alt="Брендування 2" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/branding-2.JPG" alt="Брендування"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Брендування</h3>
-          <p class="text-sm text-gray-600">Комплексне оформлення / стиль</p>
+          <p class="text-sm text-gray-600">Оформлення, логотипи, елементи айдентики.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/branding-3.JPG" alt="Брендування 3" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/branding-3.JPG" alt="Брендування"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Брендування</h3>
-          <p class="text-sm text-gray-600">Комплексне оформлення / стиль</p>
+          <p class="text-sm text-gray-600">Оформлення, логотипи, елементи айдентики.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="branding">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/branding-4.JPG" alt="Брендування 4" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/branding-4.JPG" alt="Брендування"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Брендування</h3>
-          <p class="text-sm text-gray-600">Комплексне оформлення / стиль</p>
+          <p class="text-sm text-gray-600">Оформлення, логотипи, елементи айдентики.</p>
         </div>
       </article>
 
-      <!-- ===== КОМПОЗИТ (composite-*.JPG) ===== -->
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite fasad">
+      <!-- ================= ФАСАДИ (side-*.JPG) ================= -->
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="side">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/composite-1.JPG" alt="Композит 1" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/side-1.JPG" alt="Фасад"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-1">Фасади</h3>
+          <p class="text-sm text-gray-600">Фасадні елементи та монтажні рішення.</p>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="side">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="img/outdoor/side-2.JPG" alt="Фасад"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-1">Фасади</h3>
+          <p class="text-sm text-gray-600">Фасадні елементи та монтажні рішення.</p>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="side">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="img/outdoor/side-3.JPG" alt="Фасад"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-1">Фасади</h3>
+          <p class="text-sm text-gray-600">Фасадні елементи та монтажні рішення.</p>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="side">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="img/outdoor/side-4.JPG" alt="Фасад"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg mb-1">Фасади</h3>
+          <p class="text-sm text-gray-600">Фасадні елементи та монтажні рішення.</p>
+        </div>
+      </article>
+
+      <!-- ================= КОМПОЗИТ (composite-*.JPG) ================= -->
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="img/outdoor/composite-1.JPG" alt="Композит"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Композит</h3>
-          <p class="text-sm text-gray-600">Панелі / касети / фасадні рішення</p>
+          <p class="text-sm text-gray-600">Касети, елементи та рішення з композиту.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/composite-2.JPG" alt="Композит 2" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/composite-2.JPG" alt="Композит"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Композит</h3>
-          <p class="text-sm text-gray-600">Панелі / касети / фасадні рішення</p>
+          <p class="text-sm text-gray-600">Касети, елементи та рішення з композиту.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/composite-3.JPG" alt="Композит 3" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/composite-3.JPG" alt="Композит"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Композит</h3>
-          <p class="text-sm text-gray-600">Панелі / касети / фасадні рішення</p>
+          <p class="text-sm text-gray-600">Касети, елементи та рішення з композиту.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/composite-4.JPG" alt="Композит 4" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/composite-4.JPG" alt="Композит"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Композит</h3>
-          <p class="text-sm text-gray-600">Панелі / касети / фасадні рішення</p>
+          <p class="text-sm text-gray-600">Касети, елементи та рішення з композиту.</p>
         </div>
       </article>
 
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite fasad">
+      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="composite">
         <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/composite-5.JPG" alt="Композит 5" class="w-full h-full object-cover" loading="lazy" />
+          <img src="img/outdoor/composite-5.JPG" alt="Композит"
+               class="w-full h-full object-cover" />
         </div>
         <div class="p-5">
           <h3 class="font-semibold text-lg mb-1">Композит</h3>
-          <p class="text-sm text-gray-600">Панелі / касети / фасадні рішення</p>
-        </div>
-      </article>
-
-      <!-- ===== ФАСАДНІ / ТОРЦЕВІ (side-*.JPG) ===== -->
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="fasad signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/side-1.JPG" alt="Фасадне рішення 1" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Фасад</h3>
-          <p class="text-sm text-gray-600">Фасадне / торцеве рішення</p>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="fasad signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/side-2.JPG" alt="Фасадне рішення 2" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Фасад</h3>
-          <p class="text-sm text-gray-600">Фасадне / торцеве рішення</p>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="fasad signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/side-3.JPG" alt="Фасадне рішення 3" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Фасад</h3>
-          <p class="text-sm text-gray-600">Фасадне / торцеве рішення</p>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-3xl shadow-sm overflow-hidden fade-up" data-category="fasad signs">
-        <div class="aspect-[4/3] overflow-hidden">
-          <img src="/img/outdoor/side-4.JPG" alt="Фасадне рішення 4" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-lg mb-1">Фасад</h3>
-          <p class="text-sm text-gray-600">Фасадне / торцеве рішення</p>
+          <p class="text-sm text-gray-600">Касети, елементи та рішення з композиту.</p>
         </div>
       </article>
 
@@ -435,9 +444,9 @@
 
 <!-- ================= CTA ================= -->
 <section class="py-16 bg-[#E7972E] text-center text-white">
-  <h2 class="text-3xl md:text-4xl font-bold mb-4">Потрібна вивіска або брендування фасаду?</h2>
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">Потрібна зовнішня реклама?</h2>
   <p class="text-lg mb-8">
-    Надішліть макет або опишіть задачу — підготуємо прорахунок та запропонуємо оптимальний варіант.
+    Напишіть нам — підкажемо формат, підготуємо макет і прорахунок.
   </p>
 
   <a href="contacts.html"
@@ -455,41 +464,33 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('[data-category]');
-
-    const setActiveButton = (btn) => {
-      filterButtons.forEach(b => {
-        b.classList.remove('bg-[#042030]', 'text-white', 'border-[#042030]');
-        b.classList.add('bg-white', 'text-[#042030]', 'border', 'border-gray-200');
-      });
-
-      btn.classList.remove('bg-white', 'text-[#042030]', 'border-gray-200');
-      btn.classList.add('bg-[#042030]', 'text-white', 'border', 'border-[#042030]');
-    };
-
-    const applyFilter = (filter) => {
-      cards.forEach(card => {
-        const categories = (card.dataset.category || '').split(/\s+/).filter(Boolean);
-        if (filter === 'all' || categories.includes(filter)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    };
+    const cards = document.querySelectorAll('article[data-category]');
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
-        setActiveButton(btn);
-        applyFilter(filter);
+
+        // стилі для всіх кнопок
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-[#042030]', 'text-white', 'border-[#042030]');
+          b.classList.add('bg-white', 'text-[#042030]', 'border', 'border-gray-200');
+        });
+
+        // активна кнопка
+        btn.classList.remove('bg-white', 'text-[#042030]', 'border-gray-200');
+        btn.classList.add('bg-[#042030]', 'text-white', 'border', 'border-[#042030]');
+
+        // фільтрація
+        cards.forEach(card => {
+          const category = (card.dataset.category || '').trim(); // напр. "neon"
+          if (filter === 'all' || category.split(' ').includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
       });
     });
-
-    // стартовий стан
-    const first = document.querySelector('.filter-btn[data-filter="all"]');
-    if (first) setActiveButton(first);
-    applyFilter('all');
   });
 </script>
 
