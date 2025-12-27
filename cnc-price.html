@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Прайс на фрезерну порізку — Grain</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Прайс на фрезерну порізку — GRAIN</title>
   <meta name="description" content="Актуальні ціни на фрезерну порізку на ЧПУ: акрил, ПВХ, композит, фанера та інші матеріали.">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="bg-white text-[#042030]">
-<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="/" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
-    <a href="/" class="text-lg hover:text-[#E7972E] transition">На головну</a>
-  </div>
-</header>
 
-<section class="pt-32 pb-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h1 class="text-4xl font-bold mb-6">Прайс на фрезерну порізку</h1>
-    <p class="mb-4 text-lg">
-      Тут ми розмістимо детальну таблицю з цінами на фрезерування пластику, композиту, фанери, акрилу та інших матеріалів.
-    </p>
-    <p>
-      Можемо перенести у вигляді таблиці твій існуючий прайс FrezaLviv або зробити окремі блоки для оптових клієнтів та ЗСУ.
-    </p>
-  </div>
-</section>
+<body class="bg-white text-[#042030]">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold tracking-wide text-[#042030]">GRAIN</a>
+      <a href="/" class="text-lg hover:text-[#E7972E] transition">На головну</a>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <section class="pt-32 pb-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Прайс на фрезерну порізку</h1>
+
+      <p class="text-lg text-gray-700 max-w-3xl mb-8">
+        Актуальні ціни на фрезерну порізку на ЧПУ: акрил, ПВХ, композит, фанера та інші матеріали.
+        Натисніть «Відкрити прайс» — файл відкриється у новій вкладці.
+      </p>
+
+      <!-- BUTTONS -->
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="/price/cnc-price.pdf"
+           target="_blank"
+           rel="noopener"
+           class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#042030] text-white font-semibold hover:opacity-90 transition">
+          Відкрити прайс (PDF)
+        </a>
+
+        <a href="/price/cnc-price.pdf"
+           download
+           class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-gray-200 bg-white text-[#042030] font-semibold hover:bg-gray-50 transition">
+          Завантажити
+        </a>
+      </div>
+
+      <!-- EMBED PDF -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="px-5 py-4 border-b border-gray-100">
+          <h2 class="text-lg font-semibold">Перегляд прайсу</h2>
+          <p class="text-sm text-gray-600">Якщо PDF не відображається — скористайтеся кнопками вище.</p>
+        </div>
+
+        <div class="w-full" style="height: 75vh;">
+          <iframe
+            src="/price/cnc-price.pdf"
+            title="Прайс на фрезерну порізку"
+            class="w-full h-full"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>
