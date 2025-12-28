@@ -30,35 +30,72 @@
 <body class="bg-[#F8F8F8] text-[#042030]">
 
   <!-- ================= HEADER ================= -->
-  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur border-b border-gray-100 z-50">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="/index.html" class="text-2xl font-extrabold tracking-tight">GRAIN</a>
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-      <!-- Nav -->
-      <nav class="hidden md:flex items-center gap-8 font-semibold">
-        <a href="/portfolio-outdoor.html" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-        <a href="/portfolio-cnc.html" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
-        <a href="/portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
-        <a href="/about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-        <a href="/contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-      </nav>
+    <!-- ЛОГО -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
+      GRAIN
+    </a>
 
-      <!-- Phone + button -->
-      <div class="hidden md:flex items-center gap-6">
-        <a href="tel:+380962443724"
-           class="text-base font-semibold text-[#042030] hover:text-[#E7972E] transition">
-          +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-        </a>
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
+      <a href="#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+      <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
+      <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+      <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
 
-        <a href="https://t.me/+380962443724"
-           target="_blank" rel="noopener"
-           class="px-6 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
-          Замовити дзвінок
-        </a>
-      </div>
+      <a href="tel:+380962443724"
+         class="font-semibold text-[#042030] hover:text-[#E7972E] transition whitespace-nowrap">
+        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
+      </a>
+    </nav>
+
+    <!-- RIGHT: button (desktop) + burger (mobile) -->
+    <div class="flex items-center gap-3">
+      <!-- КНОПКА (desktop) -->
+      <a href="https://t.me/+380962443724"
+         target="_blank"
+         rel="noopener"
+         class="hidden md:inline-flex px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
+        Замовити дзвінок
+      </a>
+
+      <!-- BURGER (mobile) -->
+      <button id="mobileMenuBtn"
+              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
+              aria-label="Відкрити меню"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
-  </header>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-base font-medium">
+      <a href="#outdoor" class="py-2 hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="#cnc" class="py-2 hover:text-[#E7972E] transition">Фрезерна порізка</a>
+      <a href="portfolio.html" class="py-2 hover:text-[#E7972E] transition">Портфоліо</a>
+      <a href="about.html" class="py-2 hover:text-[#E7972E] transition">Про нас</a>
+      <a href="contacts.html" class="py-2 hover:text-[#E7972E] transition">Контакти</a>
+
+      <a href="tel:+380962443724" class="py-2 font-semibold hover:text-[#E7972E] transition">
+        +38 096 244 37 24
+      </a>
+
+      <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
+         class="mt-2 inline-flex justify-center px-5 py-3 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+        Замовити дзвінок
+      </a>
+    </div>
+  </div>
+</header>
 
   <!-- ================= CONTENT ================= -->
   <main class="pt-28">
@@ -188,6 +225,73 @@
       });
     });
   </script>
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- ЛОГО -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
+      GRAIN
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
+      <a href="#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+      <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
+      <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+      <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+
+      <a href="tel:+380962443724"
+         class="font-semibold text-[#042030] hover:text-[#E7972E] transition whitespace-nowrap">
+        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
+      </a>
+    </nav>
+
+    <!-- RIGHT: button (desktop) + burger (mobile) -->
+    <div class="flex items-center gap-3">
+      <!-- КНОПКА (desktop) -->
+      <a href="https://t.me/+380962443724"
+         target="_blank"
+         rel="noopener"
+         class="hidden md:inline-flex px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
+        Замовити дзвінок
+      </a>
+
+      <!-- BURGER (mobile) -->
+      <button id="mobileMenuBtn"
+              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
+              aria-label="Відкрити меню"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-base font-medium">
+      <a href="#outdoor" class="py-2 hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="#cnc" class="py-2 hover:text-[#E7972E] transition">Фрезерна порізка</a>
+      <a href="portfolio.html" class="py-2 hover:text-[#E7972E] transition">Портфоліо</a>
+      <a href="about.html" class="py-2 hover:text-[#E7972E] transition">Про нас</a>
+      <a href="contacts.html" class="py-2 hover:text-[#E7972E] transition">Контакти</a>
+
+      <a href="tel:+380962443724" class="py-2 font-semibold hover:text-[#E7972E] transition">
+        +38 096 244 37 24
+      </a>
+
+      <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
+         class="mt-2 inline-flex justify-center px-5 py-3 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+        Замовити дзвінок
+      </a>
+    </div>
+  </div>
+</header>
 
 </body>
 </html>
