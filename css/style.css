@@ -47,3 +47,14 @@ body {
 section[id] {
   scroll-margin-top: 96px;
 }
+/* Загальний відступ під фіксований header */
+body { padding-top: 84px; }
+
+/* Щоб якорі не ховалися під header */
+section[id] { scroll-margin-top: 96px; }
+
+/* На випадок “іконки” біля tel: на iOS */
+header a[href^="tel"]::before {
+  content: none !important;
+  display: none !important;
+}
