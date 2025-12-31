@@ -3,163 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Прайс на фрезерну порізку | GRAIN</title>
-  <meta name="description" content="Актуальні ціни на фрезерну порізку на ЧПУ: акрил, ПВХ, композит, фанера та інші матеріали." />
+  <title>Прайс на фрезерну порізку — GRAIN</title>
+  <meta name="description" content="Актуальні ціни на фрезерну порізку на ЧПУ: акрил, ПВХ, композит, фанера та інші матеріали.">
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Ваші стилі -->
-  <link rel="stylesheet" href="/css/style.css" />
-  <script src="/js/main.js" defer></script>  <style
-                                               
-    html { scroll-behavior: smooth; }
-  </style>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
 </head>
 
 <body class="bg-[#F8F8F8] text-[#042030]">
 
- <!-- ================= HEADER ================= -->
-<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+      <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">GRAIN</a>
 
-    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
-      GRAIN
-    </a>
-
-    <!-- DESKTOP -->
-    <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
-      <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-      <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
-      <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
-      <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-      <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-
-      <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
-    </nav>
-
-    <div class="flex items-center gap-3">
-      <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
-         class="hidden sm:inline-flex px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
-        Замовити дзвінок
-      </a>
-
-      <!-- MOBILE BUTTON -->
-      <button id="mobileMenuBtn"
-              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
-              aria-label="Відкрити меню"
-              aria-expanded="false">
-        &#9776;
-      </button>
-    </div>
-  </div>
-
-  <!-- MOBILE MENU -->
-  <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
-    <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
-      <a href="index.html#outdoor" class="py-2">Зовнішня реклама</a>
-      <a href="index.html#cnc" class="py-2">Фрезерна порізка</a>
-      <a href="portfolio.html" class="py-2">Портфоліо</a>
-      <a href="about.html" class="py-2">Про нас</a>
-      <a href="contacts.html" class="py-2">Контакти</a>
-
-      <a href="tel:+380962443724" class="py-2 font-semibold">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
-
-      <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
-         class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
-        Замовити дзвінок
-      </a>
-    </div>
-  </nav>
-</header>
-
-  <!-- ================= CONTENT ================= -->
-  <main class="pt-28 md:pt-32 pb-16">
-    <div class="max-w-6xl mx-auto px-6">
-
-      <!-- Breadcrumbs -->
-      <nav class="text-sm text-gray-500 mb-6">
-        <a href="index.html" class="hover:text-gray-700">Головна</a>
-        <span class="mx-2">/</span>
-        <a href="portfolio.html" class="hover:text-gray-700">Портфоліо</a>
-        <span class="mx-2">/</span>
-        <span class="text-gray-900 font-medium">Прайс фрезерної порізки</span>
+      <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
+        <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+        <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+        <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
+        <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+        <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
+        <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</a>
       </nav>
 
-      <!-- Title -->
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">
-        Прайс на фрезерну порізку
-      </h1>
-
-      <!-- Description -->
-      <p class="text-gray-600 max-w-3xl mb-10">
-        Актуальні ціни на фрезерування на ЧПУ. Натисніть “Відкрити прайс” — PDF відкриється у новій вкладці.
-      </p>
-
-      <!-- Actions -->
-      <div class="flex flex-wrap gap-4 mb-10">
-        <a href="/price/cnc-price.pdf" target="_blank" rel="noopener"
-           class="px-6 py-3 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
-          Відкрити прайс (PDF)
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
+           class="hidden sm:inline-flex px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
+          Замовити дзвінок
         </a>
 
-        <a href="/price/cnc-price.pdf" download
-           class="px-6 py-3 rounded-lg border border-gray-300 bg-white font-semibold hover:bg-gray-50 transition">
-          Завантажити PDF
+        <button id="mobileMenuBtn"
+                class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
+                aria-label="Відкрити меню"
+                aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
+        <a href="index.html#outdoor" class="py-2">Зовнішня реклама</a>
+        <a href="index.html#cnc" class="py-2">Фрезерна порізка</a>
+        <a href="portfolio.html" class="py-2">Портфоліо</a>
+        <a href="about.html" class="py-2">Про нас</a>
+        <a href="contacts.html" class="py-2">Контакти</a>
+        <a href="tel:+380962443724" class="py-2 font-semibold">+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</a>
+
+        <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
+           class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
+          Замовити дзвінок
         </a>
       </div>
+    </nav>
+  </header>
 
-      <!-- Info блок -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
-          <h3 class="font-semibold mb-2">Формат прайсу</h3>
-          <p class="text-gray-600 text-sm">
-            PDF-файл з таблицею цін. Якщо потрібно — зробимо окремий прайс для опту та спеціальні ціни для підрозділів.
-          </p>
-        </div>
+  <!-- CONTENT -->
+  <main class="max-w-6xl mx-auto px-6 py-10">
+    <h1 class="text-3xl md:text-4xl font-bold mb-3">Прайс на фрезерну порізку</h1>
+    <p class="text-gray-600 mb-6">
+      Натисніть “Завантажити PDF”, якщо перегляд не відкрився на вашому пристрої.
+    </p>
 
-        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
-          <h3 class="font-semibold mb-2">Як замовити</h3>
-          <p class="text-gray-600 text-sm">
-            Надішліть креслення/макет і матеріал — швидко порахуємо та підкажемо оптимізацію розкрою.
-          </p>
-        </div>
+    <div class="flex flex-wrap gap-3 mb-6">
+      <a href="/price/cnc-price.pdf" target="_blank" rel="noopener"
+         class="px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+        Відкрити PDF
+      </a>
+      <a href="/price/cnc-price.pdf" download
+         class="px-5 py-2 rounded-lg border border-gray-200 bg-white font-semibold hover:opacity-80 transition">
+        Завантажити PDF
+      </a>
+    </div>
 
-        <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
-          <h3 class="font-semibold mb-2">Контакти</h3>
-          <p class="text-gray-600 text-sm">
-            Телефон: <a class="font-semibold hover:text-[#E7972E] transition" href="tel:+380962443724">+38 096 244 37 24</a><br>
-            Telegram: <a class="font-semibold hover:text-[#E7972E] transition" href="https://t.me/+380962443724" target="_blank" rel="noopener">написати</a>
-          </p>
-        </div>
+    <div class="bg-white rounded-2xl shadow overflow-hidden">
+      <div class="w-full" style="height: 80vh;">
+        <iframe
+          src="/price/cnc-price.pdf"
+          class="w-full h-full"
+          title="Прайс CNC"
+        ></iframe>
       </div>
-
     </div>
   </main>
-<script>
-  (function () {
-    const btn = document.getElementById('mobileMenuBtn');
-    const menu = document.getElementById('mobileMenu');
-    if (!btn || !menu) return;
-
-    btn.addEventListener('click', () => {
-      const isOpen = !menu.classList.contains('hidden');
-      menu.classList.toggle('hidden', isOpen);
-      btn.setAttribute('aria-expanded', String(!isOpen));
-    });
-
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        menu.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-</script>
 
 </body>
 </html>
