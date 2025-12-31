@@ -1,4 +1,3 @@
-// /js/main.js
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("mobileMenuBtn");
   const menu = document.getElementById("mobileMenu");
@@ -15,33 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.setAttribute("aria-expanded", "false");
   };
 
-  const toggleMenu = () => {
-    const isHidden = menu.classList.contains("hidden");
-    isHidden ? openMenu() : closeMenu();
-  };
-
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    toggleMenu();
+    menu.classList.contains("hidden") ? openMenu() : closeMenu();
   });
 
-  // Закривати при кліку на посилання всередині меню
+  // Закрити після натиску на пункт меню
   menu.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-    if (link) closeMenu();
+    const a = e.target.closest("a");
+    if (a) closeMenu();
   });
 
-  // Закривати при кліку поза меню (якщо відкрите)
-  document.addEventListener("click", (e) => {
-    if (menu.classList.contains("hidden")) return;
-    if (e.target === btn || btn.contains(e.target)) return;
-    if (menu.contains(e.target)) return;
-    closeMenu();
-  });
-
-  // Закривати по Esc
+  // Закрити по Esc
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
 });
-
