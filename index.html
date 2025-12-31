@@ -18,30 +18,6 @@
     scroll-margin-top: 96px;
   }
 </style>
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Щоб контент по якорях не ховався під фіксованим header */
-    section[id] {
-      scroll-margin-top: 96px;
-    }
-
-    /* На випадок, якщо десь підтягується іконка для tel-посилань */
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
-    }
   </style>
 </head>
 <body class="bg-[#F8F8F8] text-[#042030]">
