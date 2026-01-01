@@ -11,33 +11,6 @@
 <link rel="stylesheet" href="/css/style.css">
 <script src="/js/main.js" defer></script>
     
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* щоб при переході по якорях контент не ховався під фіксованим header */
-    section[id] {
-      scroll-margin-top: 96px;
-    }
-
-    /* Прибрати можливу іконку телефону перед номером у шапці (якщо підтягується з зовнішнього CSS) */
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
-    }
   </style>
 </head>
 <body class="bg-[#F8F8F8] text-[#042030]">
