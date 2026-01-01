@@ -5,174 +5,216 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Контакти — GRAIN</title>
   <meta name="description" content="Зв’яжіться з GRAIN: замовлення зовнішньої реклами, фрезерної порізки, брендування сувенірів і промо-одягу. Львів, Україна.">
-  
+
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css" />
 
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* щоб при переході по якорях контент не ховався під фіксованим header */
+    section[id] { scroll-margin-top: 96px; }
+
+    /* прибрати можливу іконку телефону перед номером у шапці */
+    header a[href^="tel"]::before {
+      content: none !important;
+      display: none !important;
+    }
   </style>
 </head>
+
 <body class="bg-[#F8F8F8] text-[#042030]">
 
-<!-- ================= HEADER ================= -->
-<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
 
-    <a href="index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
-      GRAIN
-    </a>
-
-    <!-- DESKTOP -->
-    <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
-      <a href="index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
-      <a href="index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
-      <a href="portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
-      <a href="about.html" class="hover:text-[#E7972E] transition">Про нас</a>
-      <a href="contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-
-      <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
-    </nav>
-
-    <div class="flex items-center gap-3">
-      <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
-         class="hidden sm:inline-flex px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
-        Замовити дзвінок
+      <a href="/index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
+        GRAIN
       </a>
 
-      <!-- MOBILE BUTTON -->
-      <button id="mobileMenuBtn"
-              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
-              aria-label="Відкрити меню"
-              aria-expanded="false">
-        &#9776;
-      </button>
-    </div>
-  </div>
+      <!-- DESKTOP -->
+      <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
+        <a href="/index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
+        <a href="/index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
+        <a href="/portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
+        <a href="/about.html" class="hover:text-[#E7972E] transition">Про нас</a>
+        <a href="/contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
 
-  <!-- MOBILE MENU -->
-  <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
-    <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
-      <a href="index.html#outdoor" class="py-2">Зовнішня реклама</a>
-      <a href="index.html#cnc" class="py-2">Фрезерна порізка</a>
-      <a href="portfolio.html" class="py-2">Портфоліо</a>
-      <a href="about.html" class="py-2">Про нас</a>
-      <a href="contacts.html" class="py-2">Контакти</a>
+        <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">
+          +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
+        </a>
+      </nav>
 
-      <a href="tel:+380962443724" class="py-2 font-semibold">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
+           class="hidden sm:inline-flex px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition whitespace-nowrap">
+          Замовити дзвінок
+        </a>
 
-      <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
-         class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
-        Замовити дзвінок
-      </a>
-    </div>
-  </nav>
-</header>
-
-<!-- ================= CONTENT ================= -->
-<section class="pt-32 pb-20 px-6">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-    <!-- Ліва колонка: контакти -->
-    <div>
-     <!--  <p class="text-sm uppercase tracking-[0.25em] text-gray-500 mb-2">Контакти</p> -->
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Контакти</h1>
-      <p class="text-lg text-gray-700 mb-8 max-w-xl">
-        Залиште заявку або зателефонуйте — і ми допоможемо з вашим проєктом:
-        зовнішня реклама, фрезерна порізка, брендування сувенірів та промо-одяг.
-      </p>
-
-      <div class="space-y-6 text-lg text-gray-800">
-        <div>
-          <h2 class="font-semibold mb-1">Телефон</h2>
-          <p>
-            <a href="tel:+380962443724" class="hover:text-[#E7972E]">
-              +38 096 244 37 24
-            </a>
-          </p>
-        </div>
-
-        <div>
-          <h2 class="font-semibold mb-1">Email</h2>
-          <p>
-            <a href="mailto:info@grain.lviv.ua" class="hover:text-[#E7972E]">
-              info@grain.lviv.ua
-            </a>
-          </p>
-        </div>
-
-        <div>
-          <h2 class="font-semibold mb-1">Адреса</h2>
-          <p>м. Львів, Україна</p>
-        </div>
-
-        <div>
-          <h2 class="font-semibold mb-1">Графік</h2>
-          <p>Пн–Пт: 9:00 – 18:00</p>
-          <p>Сб–Нд: за попередньою домовленістю</p>
-        </div>
+        <!-- MOBILE BUTTON -->
+        <button id="mobileMenuBtn"
+                type="button"
+                class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
+                aria-label="Відкрити меню"
+                aria-controls="mobileMenu"
+                aria-expanded="false">
+          &#9776;
+        </button>
       </div>
     </div>
 
-    <!-- Права колонка: форма -->
-    <div>
-      <h2 class="text-2xl font-bold mb-4">Форма заявки</h2>
-      <p class="text-gray-600 mb-4">
-        Опишіть задачу, тип вивіски або роботи, розміри, матеріали та місто монтажу — ми відповімо з прорахунком.
-      </p>
+    <!-- MOBILE MENU -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
+        <a href="/index.html#outdoor" class="py-2">Зовнішня реклама</a>
+        <a href="/index.html#cnc" class="py-2">Фрезерна порізка</a>
+        <a href="/portfolio.html" class="py-2">Портфоліо</a>
+        <a href="/about.html" class="py-2">Про нас</a>
+        <a href="/contacts.html" class="py-2">Контакти</a>
 
-      <form class="grid gap-4">
-        <input type="text"
-               placeholder="Ваше ім’я"
-               class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
+        <a href="tel:+380962443724" class="py-2 font-semibold">
+          +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
+        </a>
 
-        <input type="tel"
-               placeholder="Телефон"
-               class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
+        <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
+           class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
+          Замовити дзвінок
+        </a>
+      </div>
+    </nav>
+  </header>
 
-        <input type="email"
-               placeholder="Email (за бажанням)"
-               class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
+  <!-- ================= CONTENT ================= -->
+  <main>
+    <section class="pt-32 pb-20 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
-        <textarea rows="5"
-                  placeholder="Ваше питання або проєкт"
-                  class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]"></textarea>
+        <!-- Ліва колонка: контакти -->
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Контакти</h1>
+          <p class="text-lg text-gray-700 mb-8 max-w-xl">
+            Залиште заявку або зателефонуйте — і ми допоможемо з вашим проєктом:
+            зовнішня реклама, фрезерна порізка, брендування сувенірів та промо-одяг.
+          </p>
 
-        <button type="submit"
-                class="mt-2 px-8 py-3 bg-[#042030] text-white rounded-lg text-lg font-semibold hover:opacity-90 transition">
-          Надіслати
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
+          <div class="space-y-6 text-lg text-gray-800">
+            <div>
+              <h2 class="font-semibold mb-1">Телефон</h2>
+              <p>
+                <a href="tel:+380962443724" class="hover:text-[#E7972E] transition">
+                  +38 096 244 37 24
+                </a>
+              </p>
+            </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
-  <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
-</footer>
-<script>
-  (function () {
-    const btn = document.getElementById('mobileMenuBtn');
-    const menu = document.getElementById('mobileMenu');
-    if (!btn || !menu) return;
+            <div>
+              <h2 class="font-semibold mb-1">Email</h2>
+              <p>
+                <a href="mailto:info@grain.lviv.ua" class="hover:text-[#E7972E] transition">
+                  info@grain.lviv.ua
+                </a>
+              </p>
+            </div>
 
-    btn.addEventListener('click', () => {
-      const isOpen = !menu.classList.contains('hidden');
-      menu.classList.toggle('hidden', isOpen);
-      btn.setAttribute('aria-expanded', String(!isOpen));
-    });
+            <div>
+              <h2 class="font-semibold mb-1">Адреса</h2>
+              <p>м. Львів, Україна</p>
+            </div>
 
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
+            <div>
+              <h2 class="font-semibold mb-1">Графік</h2>
+              <p>Пн–Пт: 9:00 – 18:00</p>
+              <p>Сб–Нд: за попередньою домовленістю</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Права колонка: форма -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Форма заявки</h2>
+          <p class="text-gray-600 mb-4">
+            Опишіть задачу, тип вивіски або роботи, розміри, матеріали та місто монтажу — ми відповімо з прорахунком.
+          </p>
+
+          <form class="grid gap-4" action="#" method="post">
+            <input type="text" name="name" placeholder="Ваше ім’я"
+                   class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
+
+            <input type="tel" name="phone" placeholder="Телефон"
+                   class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
+
+            <input type="email" name="email" placeholder="Email (за бажанням)"
+                   class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
+
+            <textarea rows="5" name="message" placeholder="Ваше питання або проєкт"
+                      class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]"></textarea>
+
+            <button type="submit"
+                    class="mt-2 px-8 py-3 bg-[#042030] text-white rounded-lg text-lg font-semibold hover:opacity-90 transition">
+              Надіслати
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
+    <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
+  </footer>
+
+  <!-- ================= MOBILE MENU SCRIPT ================= -->
+  <script>
+    (function () {
+      const btn = document.getElementById('mobileMenuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+
+      if (btn.dataset.bound === '1') return;
+      btn.dataset.bound = '1';
+
+      function closeMenu() {
         menu.classList.add('hidden');
         btn.setAttribute('aria-expanded', 'false');
+      }
+
+      btn.addEventListener('click', function () {
+        const isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          closeMenu();
+        }
       });
-    });
-  })();
-</script>
+
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', function (e) {
+        const clickInside = menu.contains(e.target) || btn.contains(e.target);
+        if (!clickInside) closeMenu();
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) closeMenu();
+      });
+    })();
+  </script>
 
 </body>
 </html>
