@@ -10,27 +10,28 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css" />
 
-  <style>
-    html { scroll-behavior: smooth; }
+  <script src="/js/main.js" defer></script>
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
+<style>
+  html { scroll-behavior: smooth; }
 
-    /* щоб при переході по якорях контент не ховався під фіксованим header */
-    section[id] { scroll-margin-top: 96px; }
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards;
+  }
 
-    /* прибрати можливу іконку телефону перед номером у шапці */
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
-    }
-  </style>
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  section[id] { scroll-margin-top: 96px; }
+
+  header a[href^="tel"]::before {
+    content: none !important;
+    display: none !important;
+  }
+</style>
 </head>
 
 <body class="bg-[#F8F8F8] text-[#042030]">
