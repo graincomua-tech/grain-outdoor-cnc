@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta name="robots" content="index,follow">
-<meta property="og:locale" content="uk_UA">
-<meta property="og:site_name" content="GRAIN">
-<meta property="og:type" content="website">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Контакти GRAIN — зовнішня реклама, ЧПУ фрезерування | Львів</title>
-<meta name="description" content="Контакти GRAIN (Львів): замовлення зовнішньої реклами, фрезерної порізки на ЧПУ, брендування сувенірів і промо-одягу. Телефон, email і форма заявки.">
+  <meta name="description" content="Контакти GRAIN (Львів): замовлення зовнішньої реклами, фрезерної порізки на ЧПУ, брендування сувенірів і промо-одягу. Телефон, email і форма заявки.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="GRAIN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Контакти GRAIN — Львів">
+  <meta property="og:description" content="Телефон, email і форма заявки. Зовнішня реклама та фрезерна порізка на ЧПУ у Львові.">
+
+  <!-- Canonical (потім заміниш на свій домен) -->
+  <link rel="canonical" href="https://grain-outdoor-cnc-2idf.vercel.app/contacts.html">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/style.css" />
 
+  <!-- Ваші стилі/скрипти -->
+  <link rel="stylesheet" href="/css/style.css" />
   <script src="/js/main.js" defer></script>
 
-<style>
-  html { scroll-behavior: smooth; }
+  <style>
+    html { scroll-behavior: smooth; }
 
-  .fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s forwards;
-  }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
+    /* щоб при переході по якорях контент не ховався під fixed header */
+    section[id] { scroll-margin-top: 96px; }
 
-  section[id] { scroll-margin-top: 96px; }
-
-  header a[href^="tel"]::before {
-    content: none !important;
-    display: none !important;
-  }
-</style>
-  
+    /* на випадок, якщо зовнішні стилі додають іконку перед телефоном */
+    header a[href^="tel"]::before {
+      content: none !important;
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body class="bg-[#F8F8F8] text-[#042030]">
@@ -180,48 +188,4 @@
 
   <!-- ================= FOOTER ================= -->
   <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
-    <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
-  </footer>
-
-  <!-- ================= MOBILE MENU SCRIPT ================= -->
-  <script>
-    (function () {
-      const btn = document.getElementById('mobileMenuBtn');
-      const menu = document.getElementById('mobileMenu');
-      if (!btn || !menu) return;
-
-      if (btn.dataset.bound === '1') return;
-      btn.dataset.bound = '1';
-
-      function closeMenu() {
-        menu.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-
-      btn.addEventListener('click', function () {
-        const isHidden = menu.classList.contains('hidden');
-        if (isHidden) {
-          menu.classList.remove('hidden');
-          btn.setAttribute('aria-expanded', 'true');
-        } else {
-          closeMenu();
-        }
-      });
-
-      menu.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', closeMenu);
-      });
-
-      document.addEventListener('click', function (e) {
-        const clickInside = menu.contains(e.target) || btn.contains(e.target);
-        if (!clickInside) closeMenu();
-      });
-
-      window.addEventListener('resize', function () {
-        if (window.innerWidth >= 768) closeMenu();
-      });
-    })();
-  </script>
-
-</body>
-</html>
+    <p>© GRAIN, зовнішня реклама та фрезерна порізка
