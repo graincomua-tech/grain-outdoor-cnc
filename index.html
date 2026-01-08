@@ -4,34 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Зовнішня реклама та фрезерна порізка на ЧПУ у Львові | GRAIN</title>
-  <meta name="description" content="GRAIN (Львів): виготовлення вивісок, лайтбоксів, неону, контражуру та фрезерна порізка на ЧПУ (акрил, ПВХ, композит, фанера). Прорахунок і виробництво під ключ.">
   <meta name="robots" content="index,follow">
-
-  <!-- Open Graph -->
   <meta property="og:locale" content="uk_UA">
   <meta property="og:site_name" content="GRAIN">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="GRAIN — зовнішня реклама та ЧПУ фрезерування у Львові">
-  <meta property="og:description" content="Вивіски, лайтбокси, неон, контражур та фрезерна порізка на ЧПУ. Прорахунок і виробництво під ключ.">
 
-  <!-- Canonical (потім заміниш на свій домен) -->
-  <link rel="canonical" href="https://grain-outdoor-cnc-2idf.vercel.app/index.html">
+  <title>Зовнішня реклама та фрезерна порізка на ЧПУ у Львові | GRAIN</title>
+  <meta name="description" content="GRAIN (Львів): виготовлення вивісок, лайтбоксів, неону, контражуру та фрезерна порізка на ЧПУ (акрил, ПВХ, композит, фанера). Прорахунок і виробництво під ключ.">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Ваші стилі/скрипти -->
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/main.js" defer></script>
+  <!-- Ваші стилі -->
+  <link rel="stylesheet" href="/css/style.css" />
 
   <style>
     html { scroll-behavior: smooth; }
 
-    /* щоб при переході по якорях контент не ховався під fixed header */
     section[id] { scroll-margin-top: 96px; }
 
-    /* анімація (якщо ти її використовуєш) */
+    header a[href^="tel"]::before {
+      content: none !important;
+      display: none !important;
+    }
+
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
@@ -39,12 +35,6 @@
     }
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* прибрати можливу іконку перед телефоном у шапці */
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
     }
   </style>
 </head>
@@ -85,26 +75,29 @@
               aria-label="Відкрити меню"
               aria-controls="mobileMenu"
               aria-expanded="false">
-        &#9776;
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
       </button>
     </div>
+
   </div>
 
   <!-- MOBILE MENU -->
   <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
     <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
-      <a href="/index.html#outdoor" class="py-2">Зовнішня реклама</a>
-      <a href="/index.html#cnc" class="py-2">Фрезерна порізка</a>
-      <a href="/portfolio.html" class="py-2">Портфоліо</a>
-      <a href="/about.html" class="py-2">Про нас</a>
-      <a href="/contacts.html" class="py-2">Контакти</a>
+      <a href="/index.html#outdoor" class="py-2 hover:text-[#E7972E] transition">Зовнішня реклама</a>
+      <a href="/index.html#cnc" class="py-2 hover:text-[#E7972E] transition">Фрезерна порізка</a>
+      <a href="/portfolio.html" class="py-2 hover:text-[#E7972E] transition">Портфоліо</a>
+      <a href="/about.html" class="py-2 hover:text-[#E7972E] transition">Про нас</a>
+      <a href="/contacts.html" class="py-2 hover:text-[#E7972E] transition">Контакти</a>
 
-      <a href="tel:+380962443724" class="py-2 font-semibold">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
+      <a href="tel:+380962443724" class="py-2 font-semibold hover:text-[#E7972E] transition">
+        +38 096 244 37 24
       </a>
 
       <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
-         class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
+         class="mt-2 inline-flex justify-center px-5 py-3 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
         Замовити дзвінок
       </a>
     </div>
@@ -168,7 +161,7 @@
 
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Неонова вивіска</h3>
-        <p class="text-lg text-white/80">Неонові вивіски, контражурний неон, інтер’єрні неонові написи.</p>
+        <p class="text-lg text-white/80">Неонові вивіски, контражурний неон, інтер’єрні неонові написи та декоративні елементи.</p>
       </div>
 
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
@@ -178,12 +171,12 @@
 
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Торцеві вивіски</h3>
-        <p class="text-lg text-white/80">Добре помітні з тротуару та дороги, перпендикулярно до фасаду.</p>
+        <p class="text-lg text-white/80">Вивіски, розташовані перпендикулярно до фасаду, добре помітні з тротуару та дороги.</p>
       </div>
 
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Інші рішення</h3>
-        <p class="text-lg text-white/80">Таблички, навігація, стенди, вхідні групи та інші елементи реклами.</p>
+        <p class="text-lg text-white/80">Таблички, навігація, інформаційні стенди, вхідні групи та інші елементи зовнішньої реклами.</p>
       </div>
     </div>
   </div>
@@ -210,21 +203,15 @@
     <div class="space-y-4 fade-up">
       <div class="p-5 border border-gray-200 rounded-2xl bg-white">
         <h3 class="font-semibold mb-2">Матеріали</h3>
-        <p class="text-gray-700">
-          Пластик, акрил, композит, фанера, МДФ, полікарбонат, текстоліт, пінопласт для 3D-моделювання.
-        </p>
+        <p class="text-gray-700">Пластик, акрил, композит, фанера, МДФ, полікарбонат, текстоліт, пінопласт для 3D-моделювання.</p>
       </div>
       <div class="p-5 border border-gray-200 rounded-2xl bg-white">
         <h3 class="font-semibold mb-2">Для кого</h3>
-        <p class="text-gray-700">
-          Рекламні агенції, виробництва, дизайн-студії, меблеві та інші компанії, що потребують прецизійної порізки.
-        </p>
+        <p class="text-gray-700">Рекламні агенції, виробництва, дизайн-студії, меблеві та інші компанії, що потребують прецизійної порізки.</p>
       </div>
       <div class="p-5 border border-gray-200 rounded-2xl bg-white">
         <h3 class="font-semibold mb-2">Формат співпраці</h3>
-        <p class="text-gray-700">
-          Від одиничних деталей до регулярних оптових партій. Швидкі терміни, прорахунок за 15–30 хвилин.
-        </p>
+        <p class="text-gray-700">Від одиничних деталей до регулярних оптових партій. Швидкі терміни, прорахунок за 15–30 хвилин.</p>
       </div>
     </div>
   </div>
@@ -238,21 +225,15 @@
     <div class="grid md:grid-cols-3 gap-8">
       <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
         <h3 class="font-semibold mb-2">Комплексний підхід</h3>
-        <p class="text-gray-700">
-          Від ідеї та дизайну — до виробництва, монтажу та сервісу.
-        </p>
+        <p class="text-gray-700">Від ідеї та дизайну — до виробництва, монтажу та сервісу. Вам не потрібно шукати окремих підрядників.</p>
       </div>
       <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
         <h3 class="font-semibold mb-2">Точність і повторюваність</h3>
-        <p class="text-gray-700">
-          Фрезерна порізка на ЧПУ дає стабільну якість деталей у кожній партії.
-        </p>
+        <p class="text-gray-700">Фрезерна порізка на ЧПУ дає стабільну якість деталей у кожній партії.</p>
       </div>
       <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
         <h3 class="font-semibold mb-2">Адекватні терміни</h3>
-        <p class="text-gray-700">
-          Прорахунок вартості — до 1 робочого дня.
-        </p>
+        <p class="text-gray-700">Плануємо виробництво так, щоб ви встигали до своїх дедлайнів. Прорахунок вартості — до 1 робочого дня.</p>
       </div>
     </div>
   </div>
@@ -261,18 +242,11 @@
 <!-- ================= ЗАЛИШИТИ ЗАЯВКУ ================= -->
 <section id="contact" class="py-16 bg-[#E7972E] text-center text-white">
   <h2 class="text-4xl font-bold mb-4">Залишити заявку</h2>
-  <p class="text-lg mb-8">
-    Опишіть завдання, і ми підготуємо прорахунок протягом 1 робочого дня.
-  </p>
+  <p class="text-lg mb-8">Опишіть завдання, і ми підготуємо прорахунок протягом 1 робочого дня.</p>
 
   <div class="flex flex-col items-center space-y-4 mb-10">
-    <p class="flex items-center space-x-2 text-xl">
-      <span>📞</span><span>+38 096 244 37 24</span>
-    </p>
-
-    <p class="flex items-center space-x-2 text-xl">
-      <span>✉️</span><span>info@grain.lviv.ua</span>
-    </p>
+    <p class="flex items-center space-x-2 text-xl"><span>📞</span><span>+38 096 244 37 24</span></p>
+    <p class="flex items-center space-x-2 text-xl"><span>✉️</span><span>info@grain.lviv.ua</span></p>
   </div>
 
   <form class="max-w-4xl mx-auto space-y-6">
@@ -280,8 +254,7 @@
     <input type="text" placeholder="Телефон" class="w-full p-4 rounded-lg text-gray-700" />
     <textarea placeholder="Опишіть задачу або тип роботи" rows="6" class="w-full p-4 rounded-lg text-gray-700"></textarea>
 
-    <button type="submit"
-            class="w-full py-4 bg-[#042030] text-white font-semibold rounded-lg hover:opacity-90 transition">
+    <button type="submit" class="w-full py-4 bg-[#042030] text-white font-semibold rounded-lg hover:opacity-90 transition">
       Надіслати заявку
     </button>
   </form>
@@ -291,6 +264,39 @@
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
+
+<!-- ================= MOBILE MENU SCRIPT (один, без конфліктів) ================= -->
+<script>
+  (function () {
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+
+    function openMenu() {
+      menu.classList.remove('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu() {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isOpen = !menu.classList.contains('hidden');
+      if (isOpen) closeMenu();
+      else openMenu();
+    });
+
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 768) closeMenu();
+    });
+  })();
+</script>
 
 </body>
 </html>
