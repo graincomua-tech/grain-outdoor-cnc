@@ -59,7 +59,10 @@ header a[href^="tel"]::before {
   content: none !important;
   display: none !important;
 }
-/* FIX: не даємо style.css ламати Tailwind */
+
+/* --- MENU SAFETY (щоб Tailwind hidden працював стабільно) --- */
 .hidden { display: none !important; }
 
+/* На всяк випадок: щоб меню не “з’їжджало” */
+#mobileMenu { width: 100%; }
 
