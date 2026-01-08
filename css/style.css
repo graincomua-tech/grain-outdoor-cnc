@@ -59,5 +59,7 @@ header a[href^="tel"]::before {
   content: none !important;
   display: none !important;
 }
+/* FIX: не даємо style.css ламати Tailwind */
+.hidden { display: none !important; }
 
 
