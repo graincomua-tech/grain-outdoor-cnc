@@ -13,19 +13,15 @@
   <meta name="description" content="Портфоліо GRAIN: зовнішня реклама (вивіски, неон, контражур, лайтбокси) та фрезерна порізка на ЧПУ (акрил, композит, фанера, 3D-пінопласт). Приклади реалізованих робіт.">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
 
   <style>
     html { scroll-behavior: smooth; }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
     section[id] { scroll-margin-top: 96px; }
     header a[href^="tel"]::before { content: none !important; display: none !important; }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 
@@ -34,9 +30,7 @@
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
 
-    <a href="/index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
-      GRAIN
-    </a>
+    <a href="/index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">GRAIN</a>
 
     <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
       <a href="/index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
@@ -44,10 +38,7 @@
       <a href="/portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
       <a href="/about.html" class="hover:text-[#E7972E] transition">Про нас</a>
       <a href="/contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-
-      <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
+      <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</a>
     </nav>
 
     <div class="flex items-center gap-3">
@@ -62,27 +53,22 @@
               aria-label="Відкрити меню"
               aria-controls="mobileMenu"
               aria-expanded="false">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
+        &#9776;
       </button>
     </div>
   </div>
 
   <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
     <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
-      <a href="/index.html#outdoor" class="py-2 hover:text-[#E7972E] transition">Зовнішня реклама</a>
-      <a href="/index.html#cnc" class="py-2 hover:text-[#E7972E] transition">Фрезерна порізка</a>
-      <a href="/portfolio.html" class="py-2 hover:text-[#E7972E] transition">Портфоліо</a>
-      <a href="/about.html" class="py-2 hover:text-[#E7972E] transition">Про нас</a>
-      <a href="/contacts.html" class="py-2 hover:text-[#E7972E] transition">Контакти</a>
-
-      <a href="tel:+380962443724" class="py-2 font-semibold hover:text-[#E7972E] transition">
-        +38 096 244 37 24
-      </a>
+      <a href="/index.html#outdoor" class="py-2">Зовнішня реклама</a>
+      <a href="/index.html#cnc" class="py-2">Фрезерна порізка</a>
+      <a href="/portfolio.html" class="py-2">Портфоліо</a>
+      <a href="/about.html" class="py-2">Про нас</a>
+      <a href="/contacts.html" class="py-2">Контакти</a>
+      <a href="tel:+380962443724" class="py-2 font-semibold">+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</a>
 
       <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
-         class="mt-2 inline-flex justify-center px-5 py-3 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+         class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
         Замовити дзвінок
       </a>
     </div>
@@ -91,7 +77,6 @@
 
 <main class="pt-28 pb-20 px-6">
   <div class="max-w-6xl mx-auto">
-
     <p class="uppercase tracking-[0.2em] text-xs text-gray-500 mb-4 fade-up">Портфоліо</p>
 
     <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-up">Наші роботи</h1>
@@ -118,7 +103,6 @@
             <li>Комплексне брендування фасадів</li>
           </ul>
         </div>
-
         <a href="/portfolio-outdoor.html"
            class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#042030] text-white font-semibold hover:opacity-90 transition">
           Переглянути роботи з зовнішньої реклами
@@ -130,7 +114,7 @@
           <h2 class="text-2xl font-bold mb-3">Портфоліо фрезерної порізки</h2>
           <p class="text-gray-700 mb-4">
             Деталі з акрилу, композиту, фанери, текстоліту, технічні елементи,
-            3D-формати та прототипи.
+            3D-формати та надмогильні покриття.
           </p>
           <ul class="text-sm text-gray-600 space-y-1 mb-6 list-disc list-inside">
             <li>Розкрій листових матеріалів</li>
@@ -139,7 +123,6 @@
             <li>Серійне та одиничне виробництво</li>
           </ul>
         </div>
-
         <a href="/portfolio-cnc.html"
            class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#E7972E] text-white font-semibold hover:bg-[#d88921] transition">
           Переглянути роботи з фрезерної порізки
@@ -153,27 +136,6 @@
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
-
-<script>
-  (function () {
-    const btn = document.getElementById('mobileMenuBtn');
-    const menu = document.getElementById('mobileMenu');
-    if (!btn || !menu) return;
-
-    function openMenu() { menu.classList.remove('hidden'); btn.setAttribute('aria-expanded', 'true'); }
-    function closeMenu() { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); }
-
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const isOpen = !menu.classList.contains('hidden');
-      if (isOpen) closeMenu(); else openMenu();
-    });
-
-    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
-
-    window.addEventListener('resize', function () { if (window.innerWidth >= 768) closeMenu(); });
-  })();
-</script>
 
 </body>
 </html>
