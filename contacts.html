@@ -14,11 +14,26 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/main.js" defer></script>
 
   <style>
     html { scroll-behavior: smooth; }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     section[id] { scroll-margin-top: 96px; }
-    header a[href^="tel"]::before { content: none !important; display: none !important; }
+
+    header a[href^="tel"]::before {
+      content: none !important;
+      display: none !important;
+    }
   </style>
 </head>
 
@@ -55,27 +70,25 @@
               aria-label="Відкрити меню"
               aria-controls="mobileMenu"
               aria-expanded="false">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
+        &#9776;
       </button>
     </div>
   </div>
 
   <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
     <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
-      <a href="/index.html#outdoor" class="py-2 hover:text-[#E7972E] transition">Зовнішня реклама</a>
-      <a href="/index.html#cnc" class="py-2 hover:text-[#E7972E] transition">Фрезерна порізка</a>
-      <a href="/portfolio.html" class="py-2 hover:text-[#E7972E] transition">Портфоліо</a>
-      <a href="/about.html" class="py-2 hover:text-[#E7972E] transition">Про нас</a>
-      <a href="/contacts.html" class="py-2 hover:text-[#E7972E] transition">Контакти</a>
+      <a href="/index.html#outdoor" class="py-2">Зовнішня реклама</a>
+      <a href="/index.html#cnc" class="py-2">Фрезерна порізка</a>
+      <a href="/portfolio.html" class="py-2">Портфоліо</a>
+      <a href="/about.html" class="py-2">Про нас</a>
+      <a href="/contacts.html" class="py-2">Контакти</a>
 
-      <a href="tel:+380962443724" class="py-2 font-semibold hover:text-[#E7972E] transition">
-        +38 096 244 37 24
+      <a href="tel:+380962443724" class="py-2 font-semibold">
+        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
       </a>
 
       <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
-         class="mt-2 inline-flex justify-center px-5 py-3 rounded-lg bg-[#042030] text-white font-semibold hover:opacity-80 transition">
+         class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
         Замовити дзвінок
       </a>
     </div>
@@ -126,13 +139,10 @@
         <form class="grid gap-4" action="#" method="post">
           <input type="text" name="name" placeholder="Ваше ім’я"
                  class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
-
           <input type="tel" name="phone" placeholder="Телефон"
                  class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
-
           <input type="email" name="email" placeholder="Email (за бажанням)"
                  class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]" />
-
           <textarea rows="5" name="message" placeholder="Ваше питання або проєкт"
                     class="border border-gray-300 rounded-lg p-3 text-black focus:outline-none focus:border-[#E7972E]"></textarea>
 
@@ -150,38 +160,6 @@
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
-
-<script>
-  (function () {
-    const btn = document.getElementById('mobileMenuBtn');
-    const menu = document.getElementById('mobileMenu');
-    if (!btn || !menu) return;
-
-    function openMenu() {
-      menu.classList.remove('hidden');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-    function closeMenu() {
-      menu.classList.add('hidden');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const isOpen = !menu.classList.contains('hidden');
-      if (isOpen) closeMenu();
-      else openMenu();
-    });
-
-    menu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', closeMenu);
-    });
-
-    window.addEventListener('resize', function () {
-      if (window.innerWidth >= 768) closeMenu();
-    });
-  })();
-</script>
 
 </body>
 </html>
