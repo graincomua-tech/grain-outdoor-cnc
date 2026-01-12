@@ -10,11 +10,10 @@
   <meta property="og:type" content="website">
 
   <title>Портфоліо зовнішньої реклами | GRAIN</title>
-  <meta name="description" content="Портфоліо зовнішньої реклами GRAIN: вивіски, лайтбокси, неон, контражур, торцеві вивіски та брендування фасадів. Приклади робіт.">
+  <meta name="description" content="Портфоліо зовнішньої реклами GRAIN: вивіски, лайтбокси, неон, контражур, торцеві вивіски та брендування фасадів.">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/main.js" defer></script>
 
   <style>
     html { scroll-behavior: smooth; }
@@ -75,13 +74,10 @@
 <main class="pt-28 pb-16 px-6">
   <div class="max-w-6xl mx-auto">
     <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Портфоліо зовнішньої реклами</h1>
-    <p class="text-gray-600 max-w-3xl mb-10">
-      Натисніть на фото — відкриється в повному розмірі.
-    </p>
+    <p class="text-gray-600 max-w-3xl mb-10">Натисніть на фото — відкриється в повному розмірі.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Вивіски -->
       <a href="/img/outdoor/sign-1.JPG" target="_blank" rel="noopener"
          class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
         <div class="aspect-[4/3] bg-gray-100">
@@ -131,16 +127,49 @@
       </a>
 
     </div>
-
-    <p class="text-sm text-gray-500 mt-10">
-      Якщо хочеш, я додам сюди всі фото з папки <b>/img/outdoor/</b> (sign-2… sign-6, neon-2… тощо) — тільки скажи.
-    </p>
   </div>
 </main>
 
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
+
+<script>
+(function () {
+  const btn = document.getElementById("mobileMenuBtn");
+  const menu = document.getElementById("mobileMenu");
+  if (!btn || !menu) return;
+
+  function closeMenu() {
+    menu.classList.add("hidden");
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    const isHidden = menu.classList.contains("hidden");
+    if (isHidden) {
+      menu.classList.remove("hidden");
+      btn.setAttribute("aria-expanded", "true");
+    } else {
+      closeMenu();
+    }
+  });
+
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", function (e) {
+    const clickInside = menu.contains(e.target) || btn.contains(e.target);
+    if (!clickInside) closeMenu();
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+})();
+</script>
 
 </body>
 </html>
