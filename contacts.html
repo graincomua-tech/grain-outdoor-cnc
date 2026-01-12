@@ -14,26 +14,11 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css" />
-  <script src="/js/main.js" defer></script>
 
   <style>
     html { scroll-behavior: smooth; }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
-    }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     section[id] { scroll-margin-top: 96px; }
-
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
-    }
+    header a[href^="tel"]::before { content: none !important; display: none !important; }
   </style>
 </head>
 
@@ -41,10 +26,7 @@
 
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
-
-    <a href="/index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">
-      GRAIN
-    </a>
+    <a href="/index.html" class="text-2xl font-bold tracking-wide text-[#042030] whitespace-nowrap">GRAIN</a>
 
     <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
       <a href="/index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
@@ -52,10 +34,7 @@
       <a href="/portfolio.html" class="hover:text-[#E7972E] transition">Портфоліо</a>
       <a href="/about.html" class="hover:text-[#E7972E] transition">Про нас</a>
       <a href="/contacts.html" class="hover:text-[#E7972E] transition">Контакти</a>
-
-      <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
+      <a href="tel:+380962443724" class="font-semibold hover:text-[#E7972E] transition">+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</a>
     </nav>
 
     <div class="flex items-center gap-3">
@@ -82,10 +61,7 @@
       <a href="/portfolio.html" class="py-2">Портфоліо</a>
       <a href="/about.html" class="py-2">Про нас</a>
       <a href="/contacts.html" class="py-2">Контакти</a>
-
-      <a href="tel:+380962443724" class="py-2 font-semibold">
-        +38&nbsp;096&nbsp;244&nbsp;37&nbsp;24
-      </a>
+      <a href="tel:+380962443724" class="py-2 font-semibold">+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</a>
 
       <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
          class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
@@ -160,6 +136,43 @@
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
+
+<script>
+(function () {
+  const btn = document.getElementById("mobileMenuBtn");
+  const menu = document.getElementById("mobileMenu");
+  if (!btn || !menu) return;
+
+  function closeMenu() {
+    menu.classList.add("hidden");
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    const isHidden = menu.classList.contains("hidden");
+    if (isHidden) {
+      menu.classList.remove("hidden");
+      btn.setAttribute("aria-expanded", "true");
+    } else {
+      closeMenu();
+    }
+  });
+
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", function (e) {
+    const clickInside = menu.contains(e.target) || btn.contains(e.target);
+    if (!clickInside) closeMenu();
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+})();
+</script>
 
 </body>
 </html>
