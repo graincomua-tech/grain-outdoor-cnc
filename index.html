@@ -14,10 +14,12 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/main.js" defer></script>
 
   <style>
     html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 96px; }
+
+    header a[href^="tel"]::before { content: none !important; display: none !important; }
 
     .fade-up {
       opacity: 0;
@@ -27,19 +29,11 @@
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
     }
-
-    section[id] { scroll-margin-top: 96px; }
-
-    header a[href^="tel"]::before {
-      content: none !important;
-      display: none !important;
-    }
   </style>
 </head>
 
 <body class="bg-[#F8F8F8] text-[#042030]">
 
-<!-- ================= HEADER ================= -->
 <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
 
@@ -47,7 +41,6 @@
       GRAIN
     </a>
 
-    <!-- DESKTOP -->
     <nav class="hidden md:flex items-center gap-6 text-base font-medium whitespace-nowrap">
       <a href="/index.html#outdoor" class="hover:text-[#E7972E] transition">Зовнішня реклама</a>
       <a href="/index.html#cnc" class="hover:text-[#E7972E] transition">Фрезерна порізка</a>
@@ -66,7 +59,6 @@
         Замовити дзвінок
       </a>
 
-      <!-- MOBILE BUTTON -->
       <button id="mobileMenuBtn"
               type="button"
               class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
@@ -78,7 +70,6 @@
     </div>
   </div>
 
-  <!-- MOBILE MENU -->
   <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
     <div class="px-6 py-4 flex flex-col gap-3 text-base font-medium">
       <a href="/index.html#outdoor" class="py-2">Зовнішня реклама</a>
@@ -99,7 +90,6 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="pt-28 pb-16 px-6 bg-white text-[#042030]">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
     <div>
@@ -134,7 +124,6 @@
   </div>
 </section>
 
-<!-- ================= ЗОВНІШНЯ РЕКЛАМА ================= -->
 <section id="outdoor" class="py-20 bg-[#042030] text-white">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-4xl md:text-5xl font-bold mb-8 fade-up">Зовнішня реклама</h2>
@@ -148,27 +137,22 @@
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Вивіски з композиту</h3>
         <p class="text-lg text-white/80">Стабільні та довговічні фасадні рішення з підсвіткою або без.</p>
       </div>
-
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Лайтбокси, акриллайти</h3>
         <p class="text-lg text-white/80">Світлові короби, slim-лайтбокси та акрилові панелі з рівномірним світлом.</p>
       </div>
-
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Неонова вивіска</h3>
-        <p class="text-lg text-white/80">Неонові вивіски, контражурний неон, інтер’єрні написи та декоративні елементи.</p>
+        <p class="text-lg text-white/80">Неон, контражур, інтер’єрні написи та декоративні елементи.</p>
       </div>
-
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Окремі літери</h3>
         <p class="text-lg text-white/80">Фасадні та інтер’єрні об’ємні літери, логотипи та 3D-елементи бренду.</p>
       </div>
-
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Торцеві вивіски</h3>
         <p class="text-lg text-white/80">Конструкції перпендикулярно фасаду — добре помітні з тротуару та дороги.</p>
       </div>
-
       <div class="p-8 bg-[#042030] border border-gray-700 rounded-3xl fade-up">
         <h3 class="text-2xl font-bold mb-4 text-[#E7972E]">Інші рішення</h3>
         <p class="text-lg text-white/80">Таблички, навігація, стенди, вхідні групи та інші елементи.</p>
@@ -177,7 +161,6 @@
   </div>
 </section>
 
-<!-- ================= ФРЕЗЕРНА ПОРІЗКА ================= -->
 <section id="cnc" class="py-20 bg-white">
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
     <div>
@@ -212,29 +195,6 @@
   </div>
 </section>
 
-<!-- ================= ПЕРЕВАГИ ================= -->
-<section class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-bold mb-8 fade-up">Переваги співпраці з нами</h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
-        <h3 class="font-semibold mb-2">Комплексний підхід</h3>
-        <p class="text-gray-700">Від ідеї та дизайну — до виробництва, монтажу та сервісу.</p>
-      </div>
-      <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
-        <h3 class="font-semibold mb-2">Точність і повторюваність</h3>
-        <p class="text-gray-700">Стабільна якість деталей у кожній партії.</p>
-      </div>
-      <div class="p-6 bg-[#F8F8F8] border border-gray-200 rounded-2xl fade-up">
-        <h3 class="font-semibold mb-2">Адекватні терміни</h3>
-        <p class="text-gray-700">Плануємо виробництво під ваші дедлайни. Прорахунок — до 1 робочого дня.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ЗАЛИШИТИ ЗАЯВКУ ================= -->
 <section id="contact" class="py-16 bg-[#E7972E] text-center text-white">
   <h2 class="text-4xl font-bold mb-4">Залишити заявку</h2>
   <p class="text-lg mb-8">Опишіть завдання, і ми підготуємо прорахунок протягом 1 робочого дня.</p>
@@ -258,6 +218,43 @@
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
+
+<script>
+(function () {
+  const btn = document.getElementById("mobileMenuBtn");
+  const menu = document.getElementById("mobileMenu");
+  if (!btn || !menu) return;
+
+  function closeMenu() {
+    menu.classList.add("hidden");
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    const isHidden = menu.classList.contains("hidden");
+    if (isHidden) {
+      menu.classList.remove("hidden");
+      btn.setAttribute("aria-expanded", "true");
+    } else {
+      closeMenu();
+    }
+  });
+
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", function (e) {
+    const clickInside = menu.contains(e.target) || btn.contains(e.target);
+    if (!clickInside) closeMenu();
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+})();
+</script>
 
 </body>
 </html>
