@@ -10,15 +10,27 @@
   <meta property="og:type" content="website">
 
   <title>Портфоліо зовнішньої реклами | GRAIN</title>
-  <meta name="description" content="Портфоліо зовнішньої реклами GRAIN: вивіски, лайтбокси, неон, контражур, торцеві вивіски та брендування фасадів.">
+  <meta name="description" content="Портфоліо GRAIN: вивіски, контражур, неон, лайтбокси, торцеві конструкції та брендування фасадів.">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
 
   <style>
-    html { scroll-behavior: smooth; }
-    section[id] { scroll-margin-top: 96px; }
-    header a[href^="tel"]::before { content: none !important; display: none !important; }
+    .filter-btn{
+      padding: 8px 18px;
+      border-radius: 9999px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      font-weight: 600;
+      transition: all .2s ease;
+    }
+    .filter-btn:hover{ border-color:#cbd5e1; }
+    .filter-btn.active{
+      background:#042030;
+      color:#fff;
+      border-color:#042030;
+    }
   </style>
 </head>
 
@@ -43,12 +55,9 @@
         Замовити дзвінок
       </a>
 
-      <button id="mobileMenuBtn"
-              type="button"
+      <button id="mobileMenuBtn" type="button"
               class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-gray-200 bg-white"
-              aria-label="Відкрити меню"
-              aria-controls="mobileMenu"
-              aria-expanded="false">
+              aria-label="Відкрити меню" aria-controls="mobileMenu" aria-expanded="false">
         &#9776;
       </button>
     </div>
@@ -62,7 +71,6 @@
       <a href="/about.html" class="py-2">Про нас</a>
       <a href="/contacts.html" class="py-2">Контакти</a>
       <a href="tel:+380962443724" class="py-2 font-semibold">+38&nbsp;096&nbsp;244&nbsp;37&nbsp;24</a>
-
       <a href="https://t.me/+380962443724" target="_blank" rel="noopener"
          class="mt-2 inline-flex justify-center px-5 py-2 rounded-lg bg-[#042030] text-white font-semibold">
         Замовити дзвінок
@@ -71,105 +79,160 @@
   </nav>
 </header>
 
-<main class="pt-28 pb-16 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Портфоліо зовнішньої реклами</h1>
-    <p class="text-gray-600 max-w-3xl mb-10">Натисніть на фото — відкриється в повному розмірі.</p>
+<main class="pt-28">
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-10">
+      <nav class="text-sm text-gray-500 mb-6">
+        <a href="/index.html" class="hover:text-gray-700">Головна</a>
+        <span class="mx-2">/</span>
+        <a href="/portfolio.html" class="hover:text-gray-700">Портфоліо</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900 font-medium">Зовнішня реклама</span>
+      </nav>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Портфоліо зовнішньої реклами</h1>
+      <p class="text-gray-600 max-w-3xl mb-8">
+        Натисніть на фото — відкриється у повному розмірі.
+      </p>
 
-      <a href="/img/outdoor/sign-1.JPG" target="_blank" rel="noopener"
-         class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
-        <div class="aspect-[4/3] bg-gray-100">
-          <img src="/img/outdoor/sign-1.JPG" alt="Вивіска — приклад 1" class="w-full h-full object-cover">
-        </div>
-        <div class="p-4 font-semibold">Вивіска — приклад 1</div>
-      </a>
-
-      <a href="/img/outdoor/lightbox-1.JPG" target="_blank" rel="noopener"
-         class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
-        <div class="aspect-[4/3] bg-gray-100">
-          <img src="/img/outdoor/lightbox-1.JPG" alt="Лайтбокс — приклад 1" class="w-full h-full object-cover">
-        </div>
-        <div class="p-4 font-semibold">Лайтбокс — приклад 1</div>
-      </a>
-
-      <a href="/img/outdoor/neon-1.JPG" target="_blank" rel="noopener"
-         class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
-        <div class="aspect-[4/3] bg-gray-100">
-          <img src="/img/outdoor/neon-1.JPG" alt="Неон — приклад 1" class="w-full h-full object-cover">
-        </div>
-        <div class="p-4 font-semibold">Неон — приклад 1</div>
-      </a>
-
-      <a href="/img/outdoor/kontrazhur-1.JPG" target="_blank" rel="noopener"
-         class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
-        <div class="aspect-[4/3] bg-gray-100">
-          <img src="/img/outdoor/kontrazhur-1.JPG" alt="Контражур — приклад 1" class="w-full h-full object-cover">
-        </div>
-        <div class="p-4 font-semibold">Контражур — приклад 1</div>
-      </a>
-
-      <a href="/img/outdoor/branding-1.JPG" target="_blank" rel="noopener"
-         class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
-        <div class="aspect-[4/3] bg-gray-100">
-          <img src="/img/outdoor/branding-1.JPG" alt="Фасад / брендування — приклад 1" class="w-full h-full object-cover">
-        </div>
-        <div class="p-4 font-semibold">Фасад / брендування — приклад 1</div>
-      </a>
-
-      <a href="/img/outdoor/side-1.JPG" target="_blank" rel="noopener"
-         class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
-        <div class="aspect-[4/3] bg-gray-100">
-          <img src="/img/outdoor/side-1.JPG" alt="Торцева вивіска — приклад 1" class="w-full h-full object-cover">
-        </div>
-        <div class="p-4 font-semibold">Торцева вивіска — приклад 1</div>
-      </a>
-
+      <div class="flex flex-wrap gap-3">
+        <button class="filter-btn active" data-filter="all">Усі</button>
+        <button class="filter-btn" data-filter="sign">Вивіски</button>
+        <button class="filter-btn" data-filter="lightbox">Лайтбокси</button>
+        <button class="filter-btn" data-filter="neon">Неон</button>
+        <button class="filter-btn" data-filter="kontrazhur">Контражур</button>
+        <button class="filter-btn" data-filter="side">Торцеві</button>
+        <button class="filter-btn" data-filter="branding">Фасад/брендування</button>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="py-14">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Вивіски -->
+        <a href="/img/outdoor/sign-1.JPG" target="_blank" rel="noopener"
+           data-category="sign"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/sign-1.JPG" class="card-img" alt="Вивіска — приклад 1">
+          </div>
+          <div class="p-4 font-semibold">Вивіска — приклад 1</div>
+        </a>
+
+        <a href="/img/outdoor/sign-2.JPG" target="_blank" rel="noopener"
+           data-category="sign"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/sign-2.JPG" class="card-img" alt="Вивіска — приклад 2">
+          </div>
+          <div class="p-4 font-semibold">Вивіска — приклад 2</div>
+        </a>
+
+        <!-- Лайтбокси -->
+        <a href="/img/outdoor/lightbox-1.JPG" target="_blank" rel="noopener"
+           data-category="lightbox"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/lightbox-1.JPG" class="card-img" alt="Лайтбокс — приклад 1">
+          </div>
+          <div class="p-4 font-semibold">Лайтбокс — приклад 1</div>
+        </a>
+
+        <a href="/img/outdoor/lightbox-2.JPG" target="_blank" rel="noopener"
+           data-category="lightbox"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/lightbox-2.JPG" class="card-img" alt="Лайтбокс — приклад 2">
+          </div>
+          <div class="p-4 font-semibold">Лайтбокс — приклад 2</div>
+        </a>
+
+        <!-- Неон -->
+        <a href="/img/outdoor/neon-1.JPG" target="_blank" rel="noopener"
+           data-category="neon"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/neon-1.JPG" class="card-img" alt="Неон — приклад 1">
+          </div>
+          <div class="p-4 font-semibold">Неон — приклад 1</div>
+        </a>
+
+        <a href="/img/outdoor/neon-2.JPG" target="_blank" rel="noopener"
+           data-category="neon"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/neon-2.JPG" class="card-img" alt="Неон — приклад 2">
+          </div>
+          <div class="p-4 font-semibold">Неон — приклад 2</div>
+        </a>
+
+        <!-- Контражур -->
+        <a href="/img/outdoor/kontrazhur-1.JPG" target="_blank" rel="noopener"
+           data-category="kontrazhur"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/kontrazhur-1.JPG" class="card-img" alt="Контражур — приклад 1">
+          </div>
+          <div class="p-4 font-semibold">Контражур — приклад 1</div>
+        </a>
+
+        <a href="/img/outdoor/kontrazhur-2.JPG" target="_blank" rel="noopener"
+           data-category="kontrazhur"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/kontrazhur-2.JPG" class="card-img" alt="Контражур — приклад 2">
+          </div>
+          <div class="p-4 font-semibold">Контражур — приклад 2</div>
+        </a>
+
+        <!-- Торцеві -->
+        <a href="/img/outdoor/side-1.JPG" target="_blank" rel="noopener"
+           data-category="side"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/side-1.JPG" class="card-img" alt="Торцева — приклад 1">
+          </div>
+          <div class="p-4 font-semibold">Торцева — приклад 1</div>
+        </a>
+
+        <a href="/img/outdoor/side-2.JPG" target="_blank" rel="noopener"
+           data-category="side"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/side-2.JPG" class="card-img" alt="Торцева — приклад 2">
+          </div>
+          <div class="p-4 font-semibold">Торцева — приклад 2</div>
+        </a>
+
+        <!-- Брендування -->
+        <a href="/img/outdoor/branding-1.JPG" target="_blank" rel="noopener"
+           data-category="branding"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/branding-1.JPG" class="card-img" alt="Фасад / брендування — приклад 1">
+          </div>
+          <div class="p-4 font-semibold">Фасад / брендування — приклад 1</div>
+        </a>
+
+        <a href="/img/outdoor/branding-2.JPG" target="_blank" rel="noopener"
+           data-category="branding"
+           class="card bg-white rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+          <div class="aspect-[4/3]">
+            <img src="/img/outdoor/branding-2.JPG" class="card-img" alt="Фасад / брендування — приклад 2">
+          </div>
+          <div class="p-4 font-semibold">Фасад / брендування — приклад 2</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="py-6 bg-[#042030] text-center text-white/70 text-sm">
   <p>© GRAIN, зовнішня реклама та фрезерна порізка.</p>
 </footer>
-
-<script>
-(function () {
-  const btn = document.getElementById("mobileMenuBtn");
-  const menu = document.getElementById("mobileMenu");
-  if (!btn || !menu) return;
-
-  function closeMenu() {
-    menu.classList.add("hidden");
-    btn.setAttribute("aria-expanded", "false");
-  }
-
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    const isHidden = menu.classList.contains("hidden");
-    if (isHidden) {
-      menu.classList.remove("hidden");
-      btn.setAttribute("aria-expanded", "true");
-    } else {
-      closeMenu();
-    }
-  });
-
-  menu.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", closeMenu);
-  });
-
-  document.addEventListener("click", function (e) {
-    const clickInside = menu.contains(e.target) || btn.contains(e.target);
-    if (!clickInside) closeMenu();
-  });
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth >= 768) closeMenu();
-  });
-})();
-</script>
 
 </body>
 </html>
